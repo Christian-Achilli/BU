@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context crossContext="false" debug="5" docBase="" path="" reloadable="true">
+
+<Resource name="jdbc/marshdbint" auth="Container" 
+            type="javax.sql.DataSource"
+            removeAbandoned="true"
+            removeAbandonedTimeout="30"
+            maxActive="20" 
+            maxIdle="5" 
+            maxWait="10000"
+            username="marsh_dev" 
+            password="marsh" 
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/marsh_dev?noAccessToProcedureBodies=true"
+            validationQuery="select 1" />
+            
+<Resource name="jdbc/marshdbprd" auth="Container" 
+            type="javax.sql.DataSource"
+            removeAbandoned="true"
+            removeAbandonedTimeout="30"
+            maxActive="30" 
+            maxIdle="5" 
+            maxWait="10000"
+            username="marsh_prod" 
+            password="marsh" 
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/marsh_prod?noAccessToProcedureBodies=true"
+            validationQuery="select 1" />
+
+</Context>
+
+

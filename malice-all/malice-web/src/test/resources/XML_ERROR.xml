@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:ImportDataSet
+    xsi:schemaLocation="http://tempuri.org/ImportDataSet.xsd Schema0806.xsd"
+    xmlns:mstns="http://tempuri.org/ImportDataSet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <mstns:Document mstns:ModuleType="B"
+        mstns:LastUpdatedDate="2012-05-24">
+        <mstns:BindingAuthorityDetails>
+            <mstns:BARefDate>2011-11-30</mstns:BARefDate>
+            <mstns:BARefNo>24</mstns:BARefNo>
+            <mstns:BABrokersRef>12N100005</mstns:BABrokersRef>
+            <mstns:BAPseudonym>IPR</mstns:BAPseudonym>
+            <mstns:BANumber>1124</mstns:BANumber>
+            <mstns:BAcorr_Pin1>108935</mstns:BAcorr_Pin1>
+            <mstns:BAcorr_Pin2>WWA</mstns:BAcorr_Pin2>
+            <mstns:Intermediary_Pin_type>EN-LC</mstns:Intermediary_Pin_type>
+            <mstns:Intermediary_Pin>176164</mstns:Intermediary_Pin>
+        </mstns:BindingAuthorityDetails>
+        <mstns:DocumentReferences>
+            <mstns:CertificateICNumber>A88LDC</mstns:CertificateICNumber>
+            <mstns:ICNumber></mstns:ICNumber>
+            <mstns:ICStatus>1</mstns:ICStatus>
+            <mstns:ICType>
+                <mstns:DocumentType>0</mstns:DocumentType>
+            </mstns:ICType>
+            <mstns:CoverholderPrintableReference>ECOE-8SKMHA</mstns:CoverholderPrintableReference>
+            <mstns:RenewedICNumber></mstns:RenewedICNumber>
+            <mstns:OriginalICNumber></mstns:OriginalICNumber>
+            <mstns:RelatedInceptionDate>0001-01-01</mstns:RelatedInceptionDate>
+            <mstns:RelatedInceptionTime>00:00</mstns:RelatedInceptionTime>
+            <mstns:RelatedExpiryDate>0001-01-01</mstns:RelatedExpiryDate>
+            <mstns:RelatedExpiryTime>00:00</mstns:RelatedExpiryTime>
+        </mstns:DocumentReferences>
+        <mstns:PolicyholderDetails>
+            <mstns:FiscalCode>CCIGNZ55S25G273R</mstns:FiscalCode>
+            <mstns:GenderType>M</mstns:GenderType>
+            <mstns:LastName>Ciucio</mstns:LastName>
+            <mstns:FirstName>Ignazio</mstns:FirstName>
+            <mstns:AddressLine1>Via Eugenio L'Emiro 61</mstns:AddressLine1>
+            <mstns:AddressLine2></mstns:AddressLine2>
+            <mstns:City>Palermo</mstns:City>
+            <mstns:PostCode>90135</mstns:PostCode>
+            <mstns:Region>PA</mstns:Region>
+            <mstns:Country>Italia</mstns:Country>
+        </mstns:PolicyholderDetails>
+        <mstns:CertificateSecurityDetails>
+            <mstns:SecurityType>1</mstns:SecurityType>
+            <mstns:LloydsPercentage>100</mstns:LloydsPercentage>
+            <mstns:LloydsSecurityDetails>
+                <mstns:SyndicateCode>2468</mstns:SyndicateCode>
+                <mstns:SyndicateShare>100</mstns:SyndicateShare>
+            </mstns:LloydsSecurityDetails>
+        </mstns:CertificateSecurityDetails>
+        <mstns:CertificateDateTimeDetails>
+            <mstns:InceptionDate>2012-03-07</mstns:InceptionDate>
+            <mstns:InceptionTime>00:01</mstns:InceptionTime>
+            <mstns:ExpiryDate>2013-03-07</mstns:ExpiryDate>
+            <mstns:ExpiryTime>24:00</mstns:ExpiryTime>
+            <mstns:ProposalDate>2012-03-07</mstns:ProposalDate>
+            <mstns:TacitRenewal>false</mstns:TacitRenewal>
+        </mstns:CertificateDateTimeDetails>
+        <mstns:RiskPremiumDetails>
+            <mstns:BusinessType>04</mstns:BusinessType>
+            <mstns:RiskReference>4.245</mstns:RiskReference>
+            <mstns:Premium>404.47</mstns:Premium>
+            <mstns:Accessori>40.45</mstns:Accessori>
+            <mstns:Tax>98.99</mstns:Tax>
+            <mstns:Gross>543.91</mstns:Gross>
+            <mstns:Premium_Commission_Perc>15.30</mstns:Premium_Commission_Perc>
+            <mstns:Accessori_Commission_Perc>100</mstns:Accessori_Commission_Perc>
+        </mstns:RiskPremiumDetails>
+        <mstns:TotalPremiumDetails>
+            <mstns:Currency>Euro</mstns:Currency>
+            <mstns:Premium>404.47</mstns:Premium>
+            <mstns:Accessori>40.45</mstns:Accessori>
+            <mstns:Tax>98.99</mstns:Tax>
+            <mstns:Gross>543.91</mstns:Gross>
+            <mstns:Premium_Commission_Amount>61.88</mstns:Premium_Commission_Amount>
+            <mstns:Accessori_Commission_Amount>40.45</mstns:Accessori_Commission_Amount>
+            <mstns:NumberOfInstalments>1</mstns:NumberOfInstalments>
+        </mstns:TotalPremiumDetails>
+        <mstns:Instalments>
+            <mstns:InstalmentNumber>1</mstns:InstalmentNumber>
+            <mstns:InstalmentDate>2012-04-03</mstns:InstalmentDate>
+            <mstns:Premium>404.47</mstns:Premium>
+            <mstns:Accessori>40.45</mstns:Accessori>
+            <mstns:Tax>98.99</mstns:Tax>
+            <mstns:Gross>543.91</mstns:Gross>
+            <mstns:Premium_Commission_Amount>61.88</mstns:Premium_Commission_Amount>
+            <mstns:Accessori_Commission_Amount>40.45</mstns:Accessori_Commission_Amount>
+        </mstns:Instalments>
+        <mstns:CertificateConditions>
+            <mstns:PolicyDescription>RC Professionale</mstns:PolicyDescription>
+            <mstns:GeneralConditions>Testo della "Assicurazione della Responsabilita' Civile del Medico Ospedaliero" - 12D-01-01-A</mstns:GeneralConditions>
+            <mstns:SpecialConditions>Vedi Scheda</mstns:SpecialConditions>
+            <mstns:PaymentPlanDescription></mstns:PaymentPlanDescription>
+        </mstns:CertificateConditions>
+        <mstns:CertificateAttachments>
+        </mstns:CertificateAttachments>
+    </mstns:Document>
+</mstns:ImportDataSet>

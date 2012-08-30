@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:e="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:k="urn:import:com.kp.malice.client.ui.resources">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.myTable {
+			margin-top: 7px;
+			font-size: 0.7em;
+			float: left;
+		}
+		
+		.myTable td {
+			padding-right: 5px;
+		}
+		
+		.divPaginatoreDidascalia {
+			background-color: #F6F6F6;
+			height: 40px;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 810px;
+		}
+		
+		.didascalia {
+			float: right;
+			margin-top: 15px;
+			font-size: 0.7em;
+			color: #555;
+		}
+		
+		.image {
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:ScrollPanel>
+			<g:HTMLPanel>
+				<div class="{resources.main.tableContainer} {resources.main.height488}">
+					<e:CellTable ui:field='cellTable' />
+				</div>
+				<div class="{resources.main.divPaginatoreDidascalia}">
+					<k:SimplePagerMalice stylePrimaryName='{style.myTable}'
+						ui:field='pager' />
+					<div class="{style.didascalia}">
+						<g:Image resource="{resources.yellowDid}"
+							stylePrimaryName="{style.image}" />
+						Da inviare
+						<g:Image resource="{resources.greyDid}" stylePrimaryName="{style.image}" />
+						Aperta
+						<g:Image resource="{resources.blueDid}" stylePrimaryName="{style.image}" />
+						Inviata
+					</div>
+				</div>
+			</g:HTMLPanel>
+		</g:ScrollPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

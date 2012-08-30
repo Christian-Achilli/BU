@@ -1,0 +1,45 @@
+	<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets" xmlns:d="urn:import:com.kp.malice.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.datepicker.client" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.thWidth {
+			width: 20%;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<table class="{resources.main.tabellaDivComparsa}">
+			<tr>
+				<th class="{style.thWidth}">Data Registrazione</th>
+				<th class="{style.thWidth}">Data Incasso</th>
+				<th class="{style.thWidth}">Importo</th>
+				<th class="{style.thWidth}">Mezzo Pagamento</th>
+				<th class="{style.thWidth}">Stato</th>
+			</tr>
+			<tr>
+				<td>
+					<g:Label ui:field='dataRegistrazione' />
+				</td>
+				<td>
+					<g:Label ui:field='dataIncasso' />
+				</td>
+				<td>
+					<g:Label ui:field="importoIncasso" />
+				</td>
+				<td>
+					<g:Label ui:field="mezzoPagamento" />
+				</td>
+				<td>
+					<g:Label ui:field="stato" />
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<div class="{resources.main.separatore}" ui:field="divSeparatore" />
+		<div class="{resources.main.smallButtonsContainer}">
+			<f:AnnullaConfermaWidget ui:field="annullaConfermaWidget" />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

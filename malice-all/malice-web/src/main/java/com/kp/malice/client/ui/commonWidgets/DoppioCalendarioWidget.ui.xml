@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+
+	<g:HTMLPanel>
+		<div class="{resources.main.calendario}">
+			<h1>
+				<g:Label ui:field="labelCalendario" />
+			</h1>
+			<d:UtcSafetyDateBox ui:field='dateBoxStart' />
+			<h2>al</h2>
+			<d:UtcSafetyDateBox ui:field='dateBoxEnd' />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

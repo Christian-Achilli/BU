@@ -1,0 +1,159 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.kp.malice.client.tabBenvenuto">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.mailLink {
+			TEXT-DECORATION: none;
+			font-weight: none;
+			float: right;
+			color: #444;
+		}
+		
+		.liBlack {
+			color: #444;
+			height: 20px;
+			background-color: #FFF;
+			padding-top: 10px;
+		}
+		
+		.orario {
+			color: #444;
+			height: 10px;
+			padding-top: 8px;
+			background-color: #FFF;
+			padding-bottom: 10px;
+		}
+		
+		.orarioSpan {
+			padding-left: 15px;
+		}
+		
+		.box {
+			width: 25%;
+			float: left;
+			margin-left: 7%;
+			margin-bottom: 15px;
+			color: #777;
+		}
+		
+		.box h1 {
+			font-size: 0.75em;
+			text-transform: uppercase;
+			color: #777;
+			font-weight: bold;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		
+		.box h2 {
+			font-size: 0.75em;
+			color: #777;
+			float: left;
+			margin-right: 5px;
+		}
+		
+		.box h3 {
+			text-transform: uppercase;
+			font-size: 0.75em;
+			color: #BEBEBE;
+			font-weight: bold;
+		}
+		
+		.tutorial {
+			margin-left: 5.5%;
+		}
+		
+		.tutorial h1 {
+			text-align: right;
+		}
+		
+		.info {
+			margin-left: 5.5%;
+		}
+		
+		.info h1 {
+			text-align: center;
+		}
+		/* WIDGBOX */
+		/* NEWSBOX */
+		ul.newsBox {
+			font-size: 0.75em;
+			font-weight: normal;
+			width: 100%;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		
+		ul.newsBox li a {
+			display: block;
+			text-decoration: none;
+		}
+		
+		ul.newsBox li a:hover {
+			color: #444;
+		}
+		/* WIDGBOX */
+		.tutVideo {
+			width: 100%;
+			margin-top: 5px;
+			margin-bottom: 15px;
+			float: right;
+		}
+		
+		.assistenza {
+			margin-top: 20px;
+		}
+		
+		.mailIcon {
+			float: right;
+			margin-right: 19px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:BenvenutoToolbar ui:field="toolbarRiepilogoMensileTitoli" />
+		<div
+			class="{resources.main.contentContainer} {resources.main.padTopMiddleforContentContainer}">
+			<div class="{style.box}">
+				<h3>Contatti Lloyd’s</h3>
+				<f:DownloadDocumentiWidget ui:field="downloadDocumentiLloyds" />
+				<h3 class="{style.assistenza}">Assistenza Utenti Portale GAR</h3>
+				<h3></h3>
+				<ul class="{style.newsBox}">
+					<li class="{style.orario}">
+						Lun-Ven 9-13 14-18
+						<img src="img/clock.png" style="float: right; margin-right: 19px; margin-top: -4px;"></img>
+					</li>
+					<li class="{style.liBlack}">
+						portale-gar@kubepartners.it
+						<a href="mailto:portale-gar@kubepartners.it" class="{style.mailLink}">
+							<g:Image ui:field="imgMail" resource="{resources.mailIcon}"
+								stylePrimaryName="{style.mailIcon}" />
+							<g:Image ui:field="imgMailBlack" resource="{resources.mailIconBlack}"
+								stylePrimaryName="{style.mailIcon}" />
+						</a>
+					</li>
+					<li class="{style.liBlack}">
+						039 5964484
+						<img src="img/phoneIcon.png" style="float: right; margin-right: 19px; margin-top: -2px;"></img>
+					</li>
+				</ul>
+			</div>
+			<div class="{style.box} {style.info}">
+				<h3>Tutorials:</h3>
+				<f:DownloadDocumentiWidget ui:field="downloadDocumentiTutorial" />
+				<f:DownloadDocumentiWidget ui:field="videoPortaleGar" />
+			</div>
+			<div class="{style.box} {style.info}">
+				<div class="{style.tutVideo}">
+					<iframe width="100%" height="200px"
+						src="http://www.youtube.com/embed/BDNRN8yxZo4" frameborder="0"
+						allowfullscreen="true"></iframe>
+				</div>
+			</div>
+		</div>
+		<f:FooterWidget />
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Portale GAR</title>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='init();document.f.j_username.focus();'
+	onkeyup="checkSubmit(event);">
+	<div class="logBox">
+		<div class="logoLogin"></div>
+		<div class="formBox">
+			<h1 style="color: red;">Impossibile eseguire l'accesso, controlla le tue
+					credenziali e riprova.</h1>
+			<form id="formlogin" action='j_spring_security_check' name='f'
+				id="theFormName" method="post">
+				<input name="j_username" type="text" id="username"
+					placeholder="username" style="outline: none" /> <input
+					name="j_password" type="password" id="password"
+					placeholder="password" style="outline: none" /> <a
+					href="javascript:{}" onclick="document.f.submit();" id="enter"
+					class="btn">Entra</a>
+			</form>
+			<a href="http://www.kubepartners.com/" class="kubeCopy"
+				target="_blank">&nbsp;KUBE PARTNERS</a> <span class="powered">powered
+				by </span>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function checkSubmit(event) {
+			if (event.keyCode == '13') {
+				document.f.submit();
+			} else {
+				return false;
+			}
+		}
+
+		function init() {
+			var Browser = {
+				Version : function() {
+					var version = 999; // we assume a sane browser
+					if (navigator.appVersion.indexOf("MSIE") != -1)
+						// bah, IE again, lets downgrade version number
+						version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+					return version;
+				}
+			}
+			version = Browser.Version();
+			if (version <= 7) {
+				alert("Per una più piacevole esperienza di utilizzo, Le consigliamo di passare ad un browser più moderno, come ad esempio Firefox, Chrome o ad una versione aggiornata di Internet Explorer.");
+			}
+		}
+	</script>
+</body>
+</html>

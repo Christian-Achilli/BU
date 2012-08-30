@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://dozer.sourceforge.net
+http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  
+  <mapping> 
+    <class-a>com.kp.marsh.ebt.server.webapp.data.domain.Products</class-a>
+    <class-b>com.kp.marsh.ebt.shared.dto.ProductInfoDTO</class-b>   
+  </mapping>  
+
+</mappings>

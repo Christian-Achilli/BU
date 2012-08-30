@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.istogramRectangularBlue {
+	padding: 25px 25px 25px 25px;
+	border-right: 20px dotted #999;
+	border-top: 3px dotted #999;
+}
+

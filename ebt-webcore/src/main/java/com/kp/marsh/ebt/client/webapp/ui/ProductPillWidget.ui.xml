@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+<ui:with field="resources" type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+		
+		<g:HTMLPanel>
+			<div class="{resources.mainStructure.greenLabel}">
+      			<g:Label ui:field="achievedText"></g:Label>
+      </div>
+			<div style="height: 30px;">
+				<g:Label ui:field="potText"></g:Label>
+				<g:Image ui:field="noteImg" styleName="{resources.mainStructure.noteIcon_hidden}" resource="{resources.note}" />
+			</div>
+      <div class="{resources.mainStructure.greyLabel}">
+      			<g:Label ui:field="finBalText"></g:Label>
+      </div>
+		</g:HTMLPanel>
+			
+</ui:UiBinder>

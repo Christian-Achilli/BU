@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Same TestCases on Different Browser" verbose="3"  parallel="tests" thread-count="3">   
+  
+<!--   <test name="Run on Firefox"> -->
+<!--     <parameter name="browser"  value="firefox"/> -->
+<!--     <parameter name="username" value="alba.103@agenzie.realemutua.it"/> -->
+<!--     <parameter name="password" value="alba123"/> -->
+<!--     <classes> -->
+<!--       <class name="functionality.Login"/> -->
+<!--     </classes> -->
+<!--   </test>   -->
+  
+  <test name="Run on Chrome">
+    <parameter name="browser"  value="firefox"/>
+    <parameter name="username" value="alessandria.106@agenzie.realemutua.it"/>
+    <parameter name="password" value="alessandria123"/>
+    <classes>
+      <class name="functionality.Login"/>
+    </classes>
+  </test>  
+
+</suite>

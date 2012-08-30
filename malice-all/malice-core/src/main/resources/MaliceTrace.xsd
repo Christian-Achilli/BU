@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/ImportDataSet.xsd" xmlns:mstns="http://tempuri.org/ImportDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:codegen="urn:schemas-microsoft-com:xml-msprop" targetNamespace="http://tempuri.org/ImportDataSet.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" id="ImportDataSet">
+	<xs:element name="ImportDataSet" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:element name="Document" type="Document"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Document">
+		<xs:sequence>
+			<xs:element name="BindingAuthorityDetails" type="BindingAuthorityDetails"/>
+			<xs:element name="DocumentReferences" type="DocumentReferences"/>
+			<xs:element name="PolicyholderDetails" type="PolicyholderDetails"/>
+			<xs:element name="CertificateSecurityDetails" type="CertificateSecurityDetails"/>
+			<xs:element name="CertificateDateTimeDetails" type="CertificateDateTimeDetails"/>
+			<xs:element name="RiskPremiumDetails" type="RiskPremiumDetails" maxOccurs="unbounded"/>
+			<xs:element name="TotalPremiumDetails" type="TotalPremiumDetails"/>
+			<xs:element name="Instalments" type="InstalmentDetails" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="CertificateConditions" type="CertificateConditions"/>
+			<xs:element name="CertificateAttachments" type="xs:string"/>
+                  	<xs:element name="GenerationMode" type="GenerationMode" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="LastUpdatedDate" type="Date" use="required" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+		<xs:attribute name="ModuleType" type="ModuleType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="BindingAuthorityDetails">
+		<xs:sequence>
+			<xs:element name="BARefDate" type="Date"
+				codegen:nullValue="0001-01-01T00:00:00.0000000" />
+			<xs:element name="BARefNo" type="BARefNo" />
+			<xs:element name="BABrokersRef" type="BABrokersRef" />
+			<xs:element name="BAPseudonym" type="BAPseudonym" />
+			<xs:element name="BANumber" type="BANumber" />
+			<xs:element name="BAcorr_Pin1" type="BAcorr_Pin1" />
+			<xs:element name="BAcorr_Pin2" type="BAcorr_Pin2" />
+			<xs:element name="Intermediary_Pin_type" type="xs:string"></xs:element>
+			<xs:element name="Intermediary_Pin" type="xs:string"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentReferences">
+		<xs:sequence>
+			<xs:element name="CertificateICNumber" type="ICNumber"/>
+			<xs:element name="ICNumber" type="ICNumber"/>
+			<xs:element name="ICStatus" type="ICStatus"/>
+			<xs:element name="ICType" type="ICType"/>
+			<xs:element name="CoverholderPrintableReference" type="CoverholderReference" minOccurs="0"/>
+			<xs:element name="RenewedICNumber" type="ICNumber"/>
+			<xs:element name="OriginalICNumber" type="ICNumber"/>
+			<xs:element name="RelatedInceptionDate" type="Date" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+			<xs:element name="RelatedInceptionTime" type="Time" codegen:nullValue="_empty"/>
+			<xs:element name="RelatedExpiryDate" type="Date" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+			<xs:element name="RelatedExpiryTime" type="Time" codegen:nullValue="_empty"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PolicyholderDetails">
+		<xs:sequence>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="NonItalianPolicyholderCode" type="Description" />
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="FiscalCode" type="FiscalCode"/>
+					<xs:element name="VATNumber" type="VATNumber" minOccurs="0" codegen:nullValue="_empty"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:element name="GenderType" type="GenderType"/>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="CompanyName" type="CompanyName" />
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="LastName" type="Name" />
+					<xs:element name="FirstName" type="Name" minOccurs="0" codegen:nullValue="_empty"/>
+					<xs:element name="JobTitle" type="Name" minOccurs="0" codegen:nullValue="_empty"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:element name="AddressLine1" type="AddressLine"/>
+			<xs:element name="AddressLine2" type="AddressLine" minOccurs="0" codegen:nullValue="_empty"/>
+			<xs:element name="City" type="AddressLine"/>
+			<xs:element name="PostCode" type="AddressLine"/>
+			<xs:element name="Region" type="AddressLine"/>
+			<xs:element name="Country" type="AddressLine"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CertificateSecurityDetails">
+		<xs:sequence>
+			<xs:element name="SecurityType" type="SecurityType"/>
+			<xs:element name="LloydsPercentage" type="Percentage"/>
+			<xs:element name="LloydsSecurityDetails" type="LloydsSecurityDetails" maxOccurs="16"/>
+			<xs:element name="FollowerDetails" type="FollowerDetails" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LloydsSecurityDetails">
+		<xs:sequence>
+			<xs:element name="SyndicateCode" type="SyndicateCode"/>
+			<xs:element name="SyndicateShare" type="Percentage"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FollowerDetails">
+		<xs:sequence>
+			<xs:element name="InsurerName" type="InsurerName"/>
+			<xs:element name="Percentage" type="Percentage"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CertificateDateTimeDetails">
+		<xs:sequence>
+			<xs:element name="InceptionDate" type="Date" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+			<xs:element name="InceptionTime" type="Time" codegen:nullValue="_empty"/>
+			<xs:element name="ExpiryDate" type="Date" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+			<xs:element name="ExpiryTime" type="Time" codegen:nullValue="_empty"/>
+			<xs:element name="ProposalDate" type="Date" codegen:nullValue="0001-01-01T00:00:00.0000000"/>
+			<xs:element name="TacitRenewal" type="Boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RiskPremiumDetails">
+		<xs:sequence>
+			<xs:element name="BusinessType" type="BusinessType" />
+			<xs:element name="RiskReference" type="RiskReference" />
+			<xs:element name="Premium" type="Money" />
+			<xs:element name="Accessori" type="Money" />
+			<xs:element name="Tax" type="Money" />
+			<xs:element name="Gross" type="Money" />
+			<xs:element name="Premium_Commission_Perc"
+				type="Percentage">
+			</xs:element>
+			<xs:element name="Accessori_Commission_Perc" type="Percentage"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TotalPremiumDetails">
+		<xs:sequence>
+			<xs:element name="Currency" type="Currency" />
+			<xs:element name="Premium" type="Money" />
+			<xs:element name="Accessori" type="Money" />
+			<xs:element name="Tax" type="Money" />
+			<xs:element name="Gross" type="Money" />
+			<xs:element name="Premium_Commission_Amount" type="Money"></xs:element>
+			<xs:element name="Accessori_Commission_Amount" type="Money"></xs:element>
+			<xs:element name="NumberOfInstalments"
+				type="NumberOfInstalments" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InstalmentDetails">
+		<xs:sequence>
+			<xs:element name="InstalmentNumber" type="InstalmentNumber" />
+			<xs:element name="InstalmentDate" type="Date" />
+			<xs:element name="Premium" type="Money" />
+			<xs:element name="Accessori" type="Money" />
+			<xs:element name="Tax" type="Money" />
+			<xs:element name="Gross" type="Money" />
+			<xs:element name="Premium_Commission_Amount" type="Money"></xs:element>
+			<xs:element name="Accessori_Commission_Amount" type="Money"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CertificateConditions">
+		<xs:sequence>
+			<xs:element name="PolicyDescription" type="Description"/>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="GeneralConditions" type="Condition" minOccurs="0" codegen:nullValue="_empty"/>
+					<xs:element name="SpecialConditions" type="SpecialCondition" minOccurs="0" codegen:nullValue="_empty"/>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="RenewalConditions" type="Condition" minOccurs="0" codegen:nullValue="_empty"/>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="AddendaConditions" type="LongCondition" minOccurs="0" codegen:nullValue="_empty"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:element name="PaymentPlanDescription" type="PlanDescriptionCondition" minOccurs="0" codegen:nullValue="_empty"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ICType">
+		<xs:sequence>
+			<xs:element name="DocumentType" type="DocumentType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GenerationMode">
+  		<xs:sequence>
+      			<xs:element name="GenerationType" type="GenerationType" />
+      			<xs:element name="ModelType" type="ModelType" minOccurs="0" />
+    		</xs:sequence>
+  	</xs:complexType>
+	<xs:simpleType name="BARefNo">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="9999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BABrokersRef">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BAPseudonym">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BANumber">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BAcorr_Pin1">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="100000"/>
+			<xs:maxInclusive value="999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BAcorr_Pin2">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ICNumber">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ICStatus">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="1"/>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>Finalised</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DocumentType">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="[0-2]"/>
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation>Original Policy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>Addendum</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Renewal Policy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+  	<xs:simpleType name="GenerationType">
+    		<xs:restriction base="xs:int">
+      		<xs:pattern value="[0-1]" />
+      		<xs:enumeration value="0">
+        		<xs:annotation>
+          			<xs:documentation>Classic</xs:documentation>
+        		</xs:annotation>
+      		</xs:enumeration>
+      		<xs:enumeration value="1">
+        		<xs:annotation>
+          			<xs:documentation>Sandwich</xs:documentation>
+        		</xs:annotation>
+      		</xs:enumeration>
+    		</xs:restriction>
+  	</xs:simpleType>
+  	<xs:simpleType name="ModelType">
+    		<xs:restriction base="xs:int">
+      		<xs:pattern value="[0-2]" />
+      		<xs:enumeration value="0">
+        		<xs:annotation>
+         			 <xs:documentation>Model0</xs:documentation>
+        		</xs:annotation>
+      		</xs:enumeration>
+      		<xs:enumeration value="1">
+        		<xs:annotation>
+          			<xs:documentation>Model1</xs:documentation>
+        		</xs:annotation>
+      		</xs:enumeration>
+      		<xs:enumeration value="2">
+       			<xs:annotation>
+          			<xs:documentation>Model2</xs:documentation>
+        		</xs:annotation>
+      		</xs:enumeration>
+    		</xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="CoverholderReference">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="13"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FiscalCode">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="16"/>
+			<xs:pattern value="([0-9]{11}|[A-Z]{6}[A-Z0-9]{9}[A-Z])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VATNumber">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+			<xs:pattern value="([0-9]{11})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GenderType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+			<xs:pattern value="C|M|F"/>
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:documentation>Company</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:documentation>Male</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="F">
+				<xs:annotation>
+					<xs:documentation>Female</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Name">
+		<xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CompanyName">
+		<xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+			<xs:maxLength value="210"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AddressLine">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SecurityType">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="[1-2]"/>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>100% Lloyd's</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Lloyd's Lead</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsurerName">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SyndicateCode">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Percentage">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="5" />
+			<xs:maxInclusive value="100"/>
+			<xs:minExclusive value="0"/> 
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Time">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
+			<xs:pattern value="((([01][0-9])|([2][0-3])):[0-5][0-9])|([2][4]:[0][0])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Date">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="Boolean">
+		<xs:restriction base="xs:boolean"/>
+	</xs:simpleType>
+	<xs:simpleType name="BusinessType">
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="RiskReference">
+		<xs:restriction base="xs:float">
+			   <xs:pattern value="([0-9]{1,2})([.])([0-9]{3})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Money">
+		<xs:restriction base="xs:decimal">
+ 			<xs:fractionDigits value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Currency">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Euro"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumberOfInstalments">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="[0-2]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InstalmentNumber">
+		<xs:restriction base="xs:int">			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Description">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Condition">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="96"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpecialCondition">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LongCondition"> 
+                <xs:restriction base="xs:string"> 
+                        <xs:maxLength value="1000"/> 
+                </xs:restriction> 
+        </xs:simpleType> 
+	<xs:simpleType name="PlanDescriptionCondition">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="21"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ModuleType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+			<xs:pattern value="B"/>
+			<xs:enumeration value="B">
+				<xs:annotation>
+					<xs:documentation>Binder placement</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

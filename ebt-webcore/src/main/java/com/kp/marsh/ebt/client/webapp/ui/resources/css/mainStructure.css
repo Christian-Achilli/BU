@@ -1,0 +1,1052 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MARSH_DASHBOARD
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+
+
+@sprite .header {
+	gwt-image: "headBkg";
+	width: auto;
+	height: 53px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	overflow: visible;
+/*	background-image: url(../img/headBkg.png);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	z-index: 999;
+}
+.wrapper {
+	width:980px;
+	margin-top: 75px;
+	margin-bottom: 20px;
+	margin-left: -490px;
+	float: left;
+	overflow: visible;
+	position: absolute;
+	left: 50%;
+}
+@sprite .navigation {
+	gwt-image: "litteBand";
+/*	background-image: url(../img/litteBand.png);*/
+	background-repeat: no-repeat;
+	background-position: right top;
+	float: left;
+	height: 53px;
+	width: 904px;
+	margin-left: -452px;
+	position: absolute;
+	left: 50%;
+}
+.footer {
+	width:900px;
+	height: auto;
+	color: #FFF;
+	font-size: 0.7em;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+@sprite .logoBox {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	float: left;
+/*	background-image: url(../img/litteBand.png);*/
+}
+.logoBox a img {
+	margin-top: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+@sprite .userBox {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 32px;
+	float: left;
+/*	background-image: url(../img/litteBand.png);*/
+	font-size: 0.75em;
+	color: #888888;
+	padding-top: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.userBox span {
+	font-weight: bold;
+	color: #333333;
+}
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MARSH_DASHBOARD
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+/*TOTALBAR*/
+.headTotal  a{
+	width: 100px;
+	text-align: right;
+	float: left;
+	margin-top: 0px;
+	margin-right: 40px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-weight: bold;
+	color: #333;
+/*	background-image: url(../img/arrDown.png);spostato nell uibinder per gestirne il dinamismo*/
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-size: 1.1em;
+	display: block;
+}
+@sprite .pulsBox {
+	gwt-image: 'litteBand';
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	float: right;
+/*	background-image: url(../img/litteBand.png);*/
+}
+.pulsBox a img {
+	width:60px;
+	height:50px;
+}
+
+@sprite .totpulsBox {
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	float: left;
+	gwt-image: 'litteBand';
+	width: auto;
+/*	background-image: url(../img/litteBand.png);*/
+}
+
+.totpulsBox a img {
+	width:60px;
+	height:50px;
+}
+
+
+@sprite .blackBandSX {
+	font-size: 0.8em;
+	gwt-image: "blackBand";
+/*	background-image: url(../img/blackBand.png);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 32px;
+	width: 880px;
+	text-transform: uppercase;
+	color: #FFF;
+	padding-top: 18px;
+	padding-left: 20px;
+	float: left;
+}
+
+.blackBandSX {
+	color: #999999;
+}
+
+.statusBarDescription{
+	color: #F1F1F1;
+}
+
+@sprite .blackBandDX {
+	gwt-image: "blackBand";
+/*	background-image: url(../img/blackBand.png);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 32px;
+	width: 180px;
+	color: #999999;
+	padding-top: 18px;
+	padding-right: 20px;
+	float: right;
+	text-align: right;
+}
+.blackBandDX span {
+	color: #FFF;
+}
+.contentBox {
+	float: left;
+	width: 900px;
+	font-size: 0.8em;
+	height: auto;
+	-moz-box-shadow: 0px 2px 4px #BBBBBB;
+	-webkit-box-shadow: 0px 2px 4px #BBBBBB;
+	box-shadow: 0px 2px 4px #BBBBBB;
+	background-color: #FFF;
+	margin-left: 40px;
+	margin-right: 40px;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB,direction=125,strength=5)\""); 
+ 	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB, direction=125, strength=5)");
+}
+.address {
+	color: #BCBCBC;
+	float: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.fastLinkLine a {
+	color: #BCBCBC;
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #BCBCBC;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-decoration: underline;
+}
+.fastLink a {
+	color: #BCBCBC;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	float: right;
+	padding-left: 5px;
+	text-decoration: underline;
+}
+.fastLink a:hover, .fastLinkLine a:hover {
+	color: #666666;
+}
+.appBox {
+	float: left;
+	height: auto;
+	width: 860px;
+	margin: 20px;
+	z-index: 700;
+	padding-left: 20px;
+}
+
+.appBoxGauges {
+	float: left;
+	height: auto;
+	width: 860px;
+	margin: 20px;
+	z-index: 700;
+}
+
+
+.totalBox {
+	float: left;
+	width: 100%;
+	margin-top: 50px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-size: 0.8em;
+	background-color: rgb(241, 241, 241);
+	-moz-opacity:99;
+	-khtml-opacity: 0.99;
+	opacity: 0.99;
+	-moz-box-shadow: 0px 2px 4px #BBBBBB;
+	-webkit-box-shadow: 0px 2px 4px #BBBBBB;
+	box-shadow: 0px 2px 4px #BBBBBB;
+	filter:literal("alpha(opacity=99)");
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB,direction=125,strength=5)\"");
+    filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB, direction=125,strength=5)");
+}	
+
+.titleBox {
+	float: left;
+	width: 740px;
+	margin-right: 60px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.titleBox2 {
+	float: left;
+	width: 740px;
+	margin-right: 60px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.subtotalBox {
+	float: left;
+	margin-left: 9px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: #e4e4e4;
+  	box-shadow: 0pt 2px 4px rgb(187, 187, 187);
+}
+
+.subtotalBox input{
+		margin-right: 6px;
+}
+
+.widgetBox {
+	float: left;
+	width: 780px;
+	margin-left: 20px;
+	margin-right: 60px;
+	margin-bottom: 3px;
+	border-top-width: 1px;
+	border-top-color: #999;
+	border-top-style: dotted;
+/*	border-bottom-width: 1px;*/
+/*	border-bottom-style: solid;*/
+/*	border-bottom-color: #CCC;*/
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+
+@sprite .backParent a {
+	gwt-image: "arrDownLight";
+	height: auto;
+	float: left;
+	width: 100px;
+	margin-left: 60px;
+	clear: right;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: right;
+	color: #BABABA;
+	margin-bottom: 5px;
+/*	background-image: url(../img/arrDownLight.png);*/
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+@sprite .navPagesSX {
+	gwt-image: "navigaBkg";
+	width: auto;
+	height: auto;
+/*	background-image: url(../img/navigaBkg.png);*/
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 60%;
+	position: fixed;
+	font-size: 0.9em;
+	float: left;
+}
+@sprite .navPagesDX {
+	gwt-image: "navigaBkg";
+/*	background-image: url(../img/navigaBkg.png);*/
+	background-repeat: no-repeat;
+	background-position: right center;
+	height: 60%;
+	width: auto;
+	position: fixed;
+	font-size: 0.9em;
+	float: left;
+	margin-left: 890px;
+}
+.navPagesSX .navSx {
+	height: 100%;
+	color: #DDDDDD;
+	text-align: right;
+	float: left;
+	
+}
+.navPagesSX .navSx tr td {
+	width: 35px;
+	vertical-align: middle;
+	padding-right: 10px;
+	letter-spacing: 0.3em;
+}
+.navPagesSX .navSx tr a img {
+	margin-top: 4px;
+	
+}
+.navPagesSX .navSx tr td a {
+	color: #DDDDDD;
+}
+.navPagesSX .navSx tr td a:hover {
+	color: #444444;
+}
+.navPagesDX .navDx {
+	height: 100%;
+	color: #DDDDDD;
+	text-align: left;
+	float: right;
+	
+}
+.navPagesDX .navDx tr a img {
+	margin-top: 4px;
+}
+.navPagesDX .navDx tr td {
+	width: 35px;
+	vertical-align: middle;
+	letter-spacing: 0.3em;
+	padding-left: 10px;
+}
+.navPagesDX .navDx tr td a {
+	color: #DDDDDD;
+}
+.navPagesDX .navDx tr td a:hover {
+	color: #444444;
+}
+@sprite .orangeButton {
+	gwt-image: "orangeButton";
+/*	background-image: url(../img/orangeButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 1.2em;
+	font-weight: bold;
+/* 	color: #E96733;  */
+color: #FFF;
+}
+
+
+@sprite .brokerIcon {
+	gwt-image: "blueBroker";
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+
+@sprite .compagniaIcon {
+	gwt-image: "blueCompany";
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+
+
+@sprite .bluButton {
+	gwt-image: "blueButton";
+/*	background-image: url(../img/blueButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+@sprite .lightbluButton{
+	gwt-image: "lightbluButton";
+/*	background-image: url(../img/lightbluButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+@sprite .greenButton{
+	gwt-image: "greenButton";
+/*	background-image: url(../img/greenButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+}
+@sprite .greyButton{
+	gwt-image: "addButton";
+/*	background-image: url(../img/greyButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #000;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+@sprite .greyButtonConsuntivo{
+	gwt-image: "addButton";
+/*	background-image: url(../img/greyButton.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #E96733;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.greenLabel{
+	color: #93C241;
+	display: block;
+	width: 75px;
+	height: 10px;
+	vertical-align: top;
+/*	padding-top: 5px;*/
+/*	padding-bottom: 5px;*/
+/*	margin-bottom: 12px;*/
+}
+.compLabel{
+	color: #333333;
+	display: block;
+	width: 75px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.greyLabel{
+	color: #AAAAAA;
+	display: block;
+	width: 75px;
+	padding-top: 1px;
+	padding-bottom: 0px;
+	height: 15px;
+}
+.totalCont {
+	width: 904px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 90px;
+	padding-left: 40px;
+}
+
+.navigationPanel {
+	width: 904px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 500px;
+}
+
+
+
+/*TABLES.CSS*/
+
+.headLines {
+	font-size: 1.1em;
+	border-right-width: 1px;
+	border-left-width: 1px;
+/*	border-right-style: dotted;*/
+/*	border-left-style: dotted;*/
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+
+.titleBox .areaBusiness {
+	width: 600px;
+	table-layout:fixed;
+	float: left;
+	text-align: center;
+	color: #666666;
+	font-weight: bold;
+	font-size: 0.9em;
+	margin-left: 140px;
+}
+
+.titleBox2 .areaBusinessTitoliDiscesa {
+	width: 600px;
+	table-layout:fixed;
+	float: left;
+	text-align: center;
+	color: #666666;
+	font-weight: bold;
+	font-size: 0.9em;
+	margin-left: 160px;
+}
+
+.titleBox .areaBusiness tr td {
+	height: 25px;
+}
+
+.spacer {
+	width: 75px;
+}
+
+
+/*TOTALBAR*/
+/*SUBTOTALBAR*/
+
+.totalWidget {
+	width: 100px;
+	text-align: left;
+	table-layout:fixed;
+	float: left;
+	margin-top: 0px;
+	margin-right: 39px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.selecTotal {
+	width: 100px;
+	text-align: left;
+	table-layout:fixed;
+	float: left;
+	margin-top: 0px;
+	margin-right: 40px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+/*.selecTotal tr td {*/
+/*	height: 25px;*/
+/*}*/
+
+.potBulLabel {
+	color: #3880BF;
+	height: 55px;
+	vertical-align: middle;
+	width:80px;
+}
+.potBulValue {
+	text-align: right;
+	height: 55px;
+	color: #3880BF;
+	vertical-align: middle;
+	width:50px;
+}
+.achBulLabel {
+	color: #99CC33;
+	height: 35px;
+	vertical-align: top;
+	width: 80px;
+}
+.achBulValue {
+	text-align: right;
+	color: #99CC33;
+	height: 35px;
+	vertical-align: top;
+	width:50px;
+}
+.gapBulLabel {
+	color: #333333;
+}
+.gapBulValue {
+	text-align: right;
+	color: #333333;
+}
+.resumeTotal {
+	width: 600px;
+	table-layout:fixed;
+	float: left;
+}
+
+.valuesArea tr td {
+	color: #333333;
+	width: 75px;
+	text-align: center;
+	vertical-align: middle;
+	height: 23px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #666666;
+	border-bottom-color: #666666;
+	font-size: 0.85em;
+}
+.totalsAreaBlu tr th {
+	color: #3880BF;
+	width: 75px;
+	text-align: center;
+	vertical-align: middle;
+	height: 25px;
+	font-weight: bold;
+	font-size: 0.95em;
+}
+.totalsAreaGreen tr th {
+	color: #99CC33;
+	width: 75px;
+	text-align: center;
+	vertical-align: middle;
+	height: 25px;
+	font-weight: bold;
+	font-size: 0.95em;
+}
+
+/*SUBTOTALBAR*/
+/*WIDGET*/
+
+.widgetBox a {
+	cursor: copy;
+}
+
+.totalWidget {
+	width: 100px;
+	text-align: left;
+	table-layout:fixed;
+	float: left;
+	margin-top: 0px;
+	margin-right: 39px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+/*.totalWidget tr td {*/
+/*	height: 25px;*/
+/*}*/
+.clientLabel {
+	font-size: 0.85em;
+	font-weight: bold;
+	color: #212121;
+	text-align: right;
+	height: 60px;
+	vertical-align: top;
+	width: 100px;
+/*	border-bottom: 1px dotted #CCCCCC;*/
+/*	border-left: 1px dotted #CCCCCC;*/
+/* 	padding-right: 10px; */
+/*	padding-bottom: 2px;*/
+}
+.trashIcon {
+	cursor: pointer;
+  cursor: hand;
+	vertical-align: top;
+	text-align: center;
+	padding-left: 7px;
+}
+
+.bigText {
+	font-size: 1.1em;
+}
+
+.normalText {
+	font-size: 1em;
+}
+
+.smallText {
+	font-size: 0.9em;
+}
+.achWidgLabel {
+	color: #99CC33;
+	height: 15px;
+	vertical-align:top;
+	font-size: 0.85em;
+}
+.achWidgValue {
+	text-align: right;
+	color: #99CC33;
+	height: 15px;
+	vertical-align:top;
+	font-size: 0.85em;
+}
+.potWidgLabel {
+	color: #3880BF;
+	height: 23px;
+	vertical-align:middle;
+	font-size: 0.85em;
+}
+.potWidgValue {
+	text-align: right;
+	color: #3880BF;
+	height: 23px;
+	vertical-align:middle;
+	font-size: 0.85em;
+}
+.consWidgLabel {
+	color: #AAAAAA;
+	vertical-align:top;
+	padding-top: 3px;
+	height: 29px;
+	font-size: 0.85em;
+}
+.consWidgValue {
+	text-align: right;
+	color: #AAAAAA;
+	vertical-align:top;
+	height: 29px;
+	font-size: 0.85em;
+	padding-top: 3px;
+}
+.gapWidgLabel {
+	color: #333333;
+	height: 25px;
+}
+.gapWidgValue {
+	text-align: right;
+	color: #333333;
+	height: 25px;
+}
+.areaWidget {
+	width: 600px;
+	table-layout:fixed;
+	float: left;
+}
+
+/* titoli deli prodotti sulle righe clienti*/
+.lineaBus tr th {
+	font-size: 0.9em;
+	color: #666666;
+	text-align: center;
+	width: 75px;
+	height: 50px;
+	vertical-align: middle;
+/*	height: 25px;*/
+/*	padding-top: 5px;*/
+/*	padding-bottom: 5px;*/
+	text-transform:capitalize;
+}
+.totLineaBus tr th {
+	font-size: 0.85em;
+	color: #333333;
+	text-align: center;
+	width: 75px;
+	height: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-transform:capitalize;
+}
+.workArea tr td {
+	font-size: 0.85em;
+	width: 75px;
+	text-align: center;
+	color: #AAAAAA;
+	padding-top:10px;
+}
+.workAreaIstogram tr td {
+	font-size: 0.9em;
+	width: 75px;
+	text-align: center;
+	color: #AAAAAA;
+	vertical-align: top;
+	text-transform: capitalize;
+}
+.consValue {
+	color: #AAAAAA;
+	vertical-align: bottom;
+/*		rgin-top: 26px;*/
+/*	margin-left: 25px;*/
+}
+/*.workArea tr td:first-child {*/
+/*	border-left-width: 1px;*/
+/*	border-left-style: solid;*/
+/*	border-left-color: #CCCCCC;*/
+/*}*/
+
+.product {
+	cursor: pointer;
+}
+
+@sprite .arrowUp {
+	gwt-image: "arrUp";
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+		
+@sprite .arrowDown {
+	gwt-image: "arrDown";
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+@sprite .noteImg {
+	gwt-image: "noteBlu"; /* it's the yellow one actually*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 75px;
+	height: auto;
+	display: block;
+	margin-bottom: 39px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: #FFF;
+}
+
+	
+.noteIcon_visible{
+	position:relative;
+	left:-25px;
+	top:-45px;
+	z-index: 900;
+}
+
+/**/
+.noteIcon_hidden {
+	position:relative;
+	left:-25px;
+	top:-45px;
+	z-index: -1;
+}
+
+@sprite .videoTutorialDiv {
+	gwt-image: "videoLoader";
+	background-color: #222222;
+	background-position: center;
+/*	-moz-opacity: 98;*/
+/*	-khtml-opacity: 0.98;*/
+/*	opacity: 0.98;*/
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+
+.videoTutorialBox {
+	position: absolute;
+	left: 50%;
+	top: 60px;
+	margin-top: 0px;
+	margin-left: -502px;
+	z-index: 999;
+}
+
+.appLoading {
+	position: absolute;
+	left: 0px;
+	top: 250px;
+	width: 100%;
+	height: auto;
+}
+
+/*POPUP conferma annula*/
+.dialogBox {
+	width: 400px;
+	height: 200px;
+	background-color: #333333;
+	color: #ffffff;
+	font-size: 0.9em;
+	z-index: 991;
+	-moz-border-radius: 14px;
+	-moz-opacity:98;
+	-khtml-opacity: 0.98;
+	opacity: 0.98;
+}
+.buttonDialogBox{
+	height: 26px;
+	cursor: pointer;
+  	cursor: hand;
+}
+/*POPUP*/
+
+/* START NAVIGATION BOX */
+.vpNavigationUfficio {
+	margin-top: 10px;
+    font-size: 0.8em;
+    margin-left: 7px;
+    width: 80px;
+}
+.vpNavigationCE {
+	margin-top: 10px;
+    font-size: 0.8em;
+	width: 200px;
+}
+.vpNavigationGC {
+	margin-top: 10px;
+    font-size: 0.8em;
+	width: 300px;
+}
+.panelNavigation {
+/* 	width: 904px; */
+/* 	margin-top: 10px; */
+/* 	padding-left: 21px; */
+/* 	padding-right: 21px; */
+/* 	margin-left: 240px; */
+	
+  float: left;
+  width: 900px;
+  font-size: 1.3em;
+  background-color: #e4e4e4;
+  height: auto;
+  box-shadow: 0pt 2px 4px rgb(187, 187, 187);
+  margin-left: 0px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+.listBoxNavigationUff{
+	width: 80px;
+	vertical-align: middle;
+	margin-left: 16px;
+}
+
+.listBoxNavigationCE{
+	width: 200px;
+	vertical-align: middle;
+}
+
+.listBoxNavigationGC{
+	width: 300px;
+	vertical-align: middle;
+}
+.labelListBoxUff {
+	color: #333333;
+	padding-bottom: 2px;
+	margin-left: 16px;
+}
+.labelListBoxCE {
+	color: #333333;
+	padding-bottom: 2px;
+}
+.labelListBoxGC {
+	color: #333333;
+	padding-bottom: 2px;
+}
+@sprite .buttonVisualizzaNavigation {
+	gwt-image: "pulsAggiorna";
+	height: 35px;
+	width: 140px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.8em;
+	background-repeat: no-repeat;
+	background-position: right center;
+	color: #FFF;
+	float: right;
+	padding-top: 18px;
+	margin-top: 11px;
+	margin-right: 16px;
+	margin-left: 0px;
+	margin-bottom: 8px;
+}
+
+@sprite .animaAggiorna {
+	gwt-image: "animaPulsAggiorna";
+	height: 35px;
+	width: 140px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.8em;
+	background-repeat: no-repeat;
+	background-position: right center;
+	color: #FFF;
+	float: right;
+	padding-top: 18px;
+	margin-top: 11px;
+	margin-right: 16px;
+	margin-left: 0px;
+	margin-bottom: 8px;
+}
+
+/* END NAVIGATION BOX */
+

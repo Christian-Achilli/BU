@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.kp.malice.client.tabChiusure">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<g:HTMLPanel>
+		<c:ChiusureToolbarEstrattiConto ui:field="toolbarChiusureEstrattiConto" />
+		<div class="{resources.main.contentContainer}">
+			<c:ChiusureListaEstrattiConto ui:field="chiusureListaEstrattiConto" />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"Http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2011 12:09:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.kp.marsh.ebt.server.webapp.data.domain.InformationOwners" table="INFORMATION_OWNERS">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" />
+        </property>
+        <property name="optlock" type="java.lang.Integer">
+            <column name="optlock" />
+        </property>
+        <property name="ownerType" type="string">
+            <column name="owner_type" length="45" not-null="true" />
+        </property>
+        <property name="parentId" type="java.lang.Integer">
+            <column name="parent_id" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="100" not-null="true">
+                <comment>la descrizione usata come label sulla interfaccia</comment>
+            </column>
+        </property>
+        <property name="enabled" type="boolean">
+            <column name="enabled" not-null="true" />
+        </property>
+        <property name="codEys" type="string">
+            <column name="cod_eys" length="10"/>
+        </property>
+        <set name="businessInformations" table="BUSINESS_INFORMATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="owner_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kp.marsh.ebt.server.webapp.data.domain.BusinessInformation" />
+        </set>
+        <set name="marshPeopleCredentialses" table="MARSH_PEOPLE_CREDENTIALS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="info_owner_id" />
+            </key>
+            <one-to-many class="com.kp.marsh.ebt.server.webapp.data.domain.MarshPeopleCredentials" />
+        </set>
+    </class>
+</hibernate-mapping>

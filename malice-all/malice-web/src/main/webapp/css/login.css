@@ -1,0 +1,236 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MALICE
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+/* RESET */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input
+	{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+fieldset,img {
+	border: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+table {
+	border: 0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/* RESET */
+/* BODY */
+html,body {
+	height: 100%;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	font-style: normal;
+	color: #333333;
+	font-size: 1em;
+	font-weight: normal;
+	background-color: #F4F4F4;
+	background-image: url(../img/headLogin.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+a,a:link,a:hover,a:visited {
+	text-decoration: none;
+}
+/* BODY */
+/* STRUCTURE */
+.logBox {
+	width: 400px;
+	margin-left: -200px;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+}
+
+.logoLogin {
+	background-image: url(../img/logoLogin.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	height: 180px;
+	width: 155px;
+}
+
+.formBox {
+	float: right;
+}
+
+.formBox h1 {
+	font-size: 0.85em;
+	font-weight: bold;
+	float: left;
+	margin-bottom: 3em;
+	width: 200px;
+}
+
+.formBox h2 a {
+	font-size: 0.7em;
+	float: right;
+	color: #C4C4C4;
+}
+
+::-webkit-input-placeholder {
+	color: #565656 !important;
+}
+
+:-moz-placeholder {
+	color: #565656 !important;
+}
+
+input[type="text"],input[type="password"],input[type="email"] {
+	background-image: url(../img/inputImage.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	clear: both;
+	float: right;
+	height: 21px;
+	width: 175px;
+	border: none;
+	margin-bottom: 2em;
+	font-family: "Arial", sans-serif;
+	font-size: 0.9em;
+	color: #333333;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+a.btn {
+	clear: both;
+	float: right;
+	height: 22px;
+	width: 175px;
+	border: none;
+	margin-bottom: 2em;
+	font-size: 0.9em;
+	background-image: url(../img/logButton.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #FFF;
+	padding-top: 12px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+a
+.btn
+:hover
+:not
+ 
+(
+.disabled
+ 
+)
+{
+background-image
+:
+ 
+url
+(../img/logButtonHover
+.png
+);
+
+	
+background-repeat
+:
+ 
+no-repeat
+;
+
+	
+background-position
+:
+ 
+left
+ 
+top
+;
+
+
+}
+a
+.btn
+:active
+:not
+ 
+(
+.disabled
+ 
+)
+{
+background-image
+:
+ 
+url
+(../img/logButtonPress
+.png
+);
+
+	
+background-repeat
+:
+ 
+no-repeat
+;
+
+	
+background-position
+:
+ 
+left
+ 
+top
+;
+
+
+}
+.kubeCopy {
+	float: right;
+	color: #C0C0C0;
+	font-size: 0.6em;
+}
+
+.kubeCopy:hover {
+	COLOR: blue;
+	TEXT-DECORATION: none;
+	font-weight: none
+}
+
+.powered {
+	font-size: 0.6em;
+	float: right;
+	color: #C0C0C0;
+}

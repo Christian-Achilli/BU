@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.box {
+			width: 159px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.box}">
+					<h1>Mese in Chiusura</h1>
+					<g:Label ui:field='mese' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.box}">
+					<h1>Titoli da Incassare</h1>
+					<g:Label ui:field='titoliIncassati' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.box}">
+					<h1>Incassi in Sospeso</h1>
+					<g:Label ui:field='titoliSospesi' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.box}">
+					<h1>Premi Incassati 2012</h1>
+					<g:Label ui:field='totPremiIncassatiAnno' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.box}">
+					<h1>Commissioni Incassate 2012</h1>
+					<g:Label ui:field='totProvvigioniIncassateAnno' />
+				</div>
+				<div class="{resources.main.separatore}" />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

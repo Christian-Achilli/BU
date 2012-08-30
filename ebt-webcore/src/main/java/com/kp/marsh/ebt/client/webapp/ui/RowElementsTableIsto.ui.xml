@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:r="urn:import:com.kp.marsh.ebt.client.webapp.ui">
+	
+	
+	<ui:with field="resources"
+		type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+	
+
+<g:HTMLPanel   styleName="{resources.mainStructure.widgetBox}">
+
+	<table  border="0" cellpadding="0" cellspacing="0" class="{resources.mainStructure.totalWidget}"> 
+         <tr> 
+           <td colspan="2" class="{resources.mainStructure.clientLabel}" ><g:Label  ui:field="rowName"></g:Label></td> 
+         </tr>
+         <tr> 
+           <td class="{resources.mainStructure.potWidgLabel}">Potenziale</td> 
+           <td class="{resources.mainStructure.potWidgValue}"><g:Label ui:field="totPot"/></td>
+         </tr> 
+         <tr ui:field="conRow"> 
+           <td class="{resources.mainStructure.achWidgLabel}">Achieved</td> 
+           <td class="{resources.mainStructure.achWidgValue}"><g:Label ui:field="totAch"/></td> 
+         </tr> 
+     </table> 
+
+
+
+	<table  border="0" cellpadding="0" cellspacing="0" class="{resources.mainStructure.areaWidget}"> 
+         <tbody class="{resources.mainStructure.workAreaIstogram}"> 
+           <tr>
+             <td><r:IstogramWidget ui:field="isto_1"/></td> 
+             <td><r:IstogramWidget ui:field="isto_2"/></td> 
+             <td><r:IstogramWidget ui:field="isto_3"/></td> 
+             <td><r:IstogramWidget ui:field="isto_4"/></td> 
+             <td><r:IstogramWidget ui:field="isto_5"/></td> 
+             <td><r:IstogramWidget ui:field="isto_6"/></td> 
+             <td><r:IstogramWidget ui:field="isto_7"/></td> 
+             <td><r:IstogramWidget ui:field="isto_8"/></td> 
+           </tr> 
+         </tbody> 
+     </table> 
+</g:HTMLPanel>     
+     
+</ui:UiBinder> 

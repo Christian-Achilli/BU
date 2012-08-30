@@ -1,0 +1,88 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:k="urn:import:com.kp.malice.client.ui.resources" xmlns:d="urn:import:com.kp.malice.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.toolbar">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.paddingTop14 {
+			padding-top: 14px;
+		}
+		
+		.paddingTop7 {
+			padding-top: 7px;
+		}
+		
+		.logo {
+			float: left;
+			margin-top: 20px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		
+		.contenitoreUserContainer {
+			width: 960px;
+			height: 32px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.headWrapper}">
+			<div class="{resources.main.headContainer}">
+				<div class="{style.logo}">
+					<g:Image resource="{resources.logoWeb}"></g:Image>
+				</div>
+				<div class="{style.contenitoreUserContainer}">
+					<div class="{resources.main.userContainer}">
+						<ul class="{resources.main.userBar}">
+							<li class="{resources.main.usrLogged}">
+								<g:Anchor ui:field="username" />
+							</li>
+							<li class="{resources.main.logOut}">
+								<form name='f' id="theLogoutFormName" action='j_spring_security_logout'
+									method='post'>
+									<a href="javascript:{}" onclick="document.f.submit();">
+										Logout
+									</a>
+								</form>
+							</li>
+							<!-- <li class="{resources.main.adminUsr}"> -->
+							<!-- <a href="#">Amministrazione</a> -->
+							<!-- </li> -->
+							<!-- <li class="{resources.main.help}"> -->
+							<!-- <a href="#">Help</a> -->
+							<!-- </li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="{resources.main.topTab}">
+					<ul class="{resources.main.topBar}">
+						<li ui:field="liSelectAgenzia">
+							<g:Anchor ui:field="aSelectAgenzia" stylePrimaryName="{style.paddingTop14}">Seleziona Agenzia</g:Anchor>
+						</li>
+						<li ui:field="liBenvenuto">
+							<g:Anchor ui:field="aBenvenuto" stylePrimaryName="{style.paddingTop14}">Benvenuto</g:Anchor>
+						</li>
+						<li ui:field="liTitoli">
+							<g:Anchor ui:field="aTitoli" stylePrimaryName="{style.paddingTop14}">Titoli</g:Anchor>
+						</li>
+						<li ui:field="liIncassi">
+							<g:Anchor ui:field="aIncassi" stylePrimaryName="{style.paddingTop14}">
+								Giornata
+							</g:Anchor>
+						</li>
+						<li ui:field="liChiusure">
+							<g:Anchor ui:field="aChiusure" stylePrimaryName="{style.paddingTop14}">Chiusure</g:Anchor>
+						</li>
+						<li ui:field="liStatistiche">
+							<g:Anchor ui:field="aStatistiche" stylePrimaryName="{style.paddingTop14}">Sintesi</g:Anchor>
+						</li>
+						<li>
+							<a class="{style.paddingTop14}">Sinistri</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

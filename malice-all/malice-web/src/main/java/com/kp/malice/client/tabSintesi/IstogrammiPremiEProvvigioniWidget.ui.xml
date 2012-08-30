@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.google.gwt.dom.client">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div id="placeholder" class="placeholder"></div>
+		<p id="hoverdata"></p>
+		<div class="{resources.main.didascaliaStatistiche}">
+			<g:Image resource="{resources.premiLordi}" />
+			Premi Lordi
+			<g:Image resource="{resources.provvigioni}" />
+			Commissioni
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.commonWidgets">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div class="{resources.main.smallButtonsContainer}">
+					<t:AnnullaConfermaWidget ui:field="annullaConfermaWidget"/>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

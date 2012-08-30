@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- DTD can be pulled from the Jar or over the web-->
+<!DOCTYPE PZMAP SYSTEM	"flatpack.dtd" >
+<!--<!DOCTYPE PZMAP SYSTEM	"http://flatpack.sourceforge.net/flatpack.dtd" >-->
+<PZMAP> 
+ <COLUMN name="Anno" /> 
+ <COLUMN name="EysCE" />
+ <COLUMN name="NomeCE" />
+ <COLUMN name="EysGc" />
+ <COLUMN name="NomeGc" /> 
+ <COLUMN name="CodGarInutile" />
+ <COLUMN name="DescrizioneGaranzia" />
+ <COLUMN name="CodGaranzia" />
+ <COLUMN name="DescrizioneGaranziaInutile" />
+ <COLUMN name="Provvigioni" />
+ <COLUMN name="ExtraProvvigioni" />
+</PZMAP>

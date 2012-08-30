@@ -1,0 +1,62 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:r="urn:import:com.kp.marsh.ebt.client.webapp.ui">
+	
+	<ui:with field="resources"
+		type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+	
+	
+	
+	<g:HTMLPanel>
+		<div class="{resources.login.header}">
+			<div class="{resources.login.navigation}">
+				<div class="{resources.login.logoBox}">
+				<a>
+					<g:Image resource="{resources.marshLogo}" width="90" height="25" />
+				</a>
+				</div>
+<!--				<div class="{resources.login.userBox}"></div>-->
+<!--				<div class="{resources.login.pulsBox}">-->
+<!--					<a>-->
+<!--						<g:Image resource="{resources.user_A}" width="25" height="25"/>-->
+<!--					</a>-->
+<!--				</div>-->
+			</div>
+		</div>
+		<div class="{resources.login.wrapper}">
+			<div class="{resources.login.contentBox}">
+				<div class="{resources.login.blackBandSX}">INSERISCI DATI UTENTE</div>
+<!-- 				<div class="{resources.login.blackBandDX}"></div> -->
+				<div class="{resources.login.loginBox}">
+						<div class="{resources.login.boxFormBig}">
+							<div class="{resources.login.labelBox}">Username</div>
+							<div class="{resources.login.boxInputBig}">
+								<g:TextBox ui:field="username"/>
+							</div>
+						</div>
+						<div class="{resources.login.boxFormBig}">
+							<div class="{resources.login.labelBox}">Password</div>
+							<div class="{resources.login.boxInputBig}">
+								<g:PasswordTextBox ui:field="password"/>
+							</div>
+						</div>
+					<div class="{resources.login.footerModulo}">
+						<div class="{resources.login.pulsForgot}">
+							<g:Anchor ui:field="forgottenPassword"> </g:Anchor>
+						</div>
+						<div class="{resources.login.pulsGreen}">
+							<g:Anchor ui:field="logIn">Login</g:Anchor>
+						</div>
+						<div class="{resources.login.pulsLoader}">
+							<g:Image ui:field="loadingImg" resource="{resources.circleLoader}"></g:Image>
+						</div>
+						<div class="{resources.login.errMsg}">
+							<g:Label ui:field="errorMessage"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

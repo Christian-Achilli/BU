@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MARSH_DASHBOARD
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+
+@sprite .popBox {
+	font-family:"Arial", sans-serif;
+	background-color: transparent;
+	gwt-image: "arrNavSx_A";
+	background-repeat: no-repeat;
+	background-position: left 8px;
+	width: 150px;
+	height: 200px;
+	font-size: 0.8em;
+	position: absolute;
+	z-index: 999;
+	margin: 0px;
+	padding: 0px;
+/*	background-position: left 12%;*/
+}
+
+
+.popContents {
+	background-color: #EEE;
+/* 	width: 100px; */
+	width: 125px;
+/*	border: 3px solid #444444;*/
+	margin-left: 10px;
+	-moz-box-shadow: 0px 2px 4px #BBBBBB;
+	-webkit-box-shadow: 0px 2px 4px #BBBBBB;
+	box-shadow: 0px 2px 4px #BBBBBB;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB,direction=125,strength=5)\""); 
+ 	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#BBBBBB, direction=125, strength=5)");
+}
+
+
+.potInp {
+	background-color: #3880BF;
+	height: 30px;
+	width: 125px;
+}
+.potInp input {
+	font-family:"Arial", sans-serif;
+	color: #FFF;
+	background-color: #3880BF;
+	width: 118px;
+	padding-left: 7px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-top: 7px;
+	margin: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	font-size: 1.1em;
+	outline:none;
+}
+.popLabels a {
+	height: 20px;
+	width: 95px;
+	padding-top: 7px;
+	padding-left: 30px;
+	display: block;
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 0.85em;
+}
+.popLabels a span {
+	color: #000;
+	font-weight: bold;
+}
+.popLabels a:hover {
+	background-color: #444444;
+	color: #FFF;
+
+}
+.popLabels a:hover span {
+	color: #FFF;
+	font-weight: normal;
+}
+
+
+@sprite .popBroker a {
+	gwt-image: "brokerPop";
+	display: block;
+	height: 20px;
+width: 95px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	padding-top: 7px;
+	padding-left: 30px;
+	color: #666;
+	font-size: 0.85em;
+}
+
+@sprite .popCompagnia a {
+	gwt-image: "companyPop";
+	display: block;
+	height: 20px;
+width: 95px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	padding-top: 7px;
+	padding-left: 30px;
+	color: #666;
+	font-size: 0.85em;
+}
+
+
+@sprite .popAggNota a {
+	gwt-image: "notePop";
+	display: block;
+	height: 20px;
+	width: 95px;
+/* 	border-top: 1px dotted  #444444; */
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	padding-top: 7px;
+	padding-left: 30px;
+	color: #666;
+	font-size: 0.85em;
+}
+
+
+@sprite .popAggNota a:hover {
+	gwt-image: "notePopHover";
+	height: 20px;
+	width: 95px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	background-color: #fef49c;
+	color: black;
+
+}
+
+@sprite .popBroker a:hover {
+	gwt-image: "brokerPopHover";
+	height: 20px;
+	width: 95px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	background-color: #3880BF;
+	color: #FFF;
+
+}
+
+@sprite .popCompagnia a:hover {
+	gwt-image: "companyPopHover";
+	height: 20px;
+	width: 95px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	background-color: #3880BF;
+	color: #FFF;
+
+}
+
+
+.popProduct {
+	font-family:"Arial", sans-serif;
+	font-size: 0.8em;
+	position: absolute;
+	z-index: 999;
+	padding: 0px;
+	background-color: #f4f4f4;
+	padding: 10px;
+	margin-top: 8px;
+	-moz-box-shadow: 0px 2px 4px #bbbbbb;
+	-webkit-box-shadow: 0px 2px 4px #bbbbbb;
+	box-shadow: 0px 2px 4px #555555;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb,direction=125,strength=5)\""); 
+ 	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb, direction=125, strength=5)");
+/* 	border: 1px dashed #BBBBBB; */
+	color: #555555;
+	width: 200px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.popProduct h1  {
+	color: #000;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+
+.popNote {
+	font-family:"Arial", sans-serif;
+	font-size: 0.8em;
+	position: absolute;
+	z-index: 999;
+	padding: 0px;
+	background-color: #fef49c;
+	padding: 10px;
+	margin-top: 0px;
+	-moz-box-shadow: 0px 2px 4px #bbbbbb;
+	-webkit-box-shadow: 0px 2px 4px #bbbbbb;
+	box-shadow: 0px 2px 4px #bbbbbb;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb,direction=125,strength=5)\""); 
+ 	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb, direction=125, strength=5)");
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.popNote textarea {
+/*	border: 1px solid #666666;*/
+	border: none;
+	width: 200px;
+	height: 200px;
+	background-color: #fef49c;
+	overflow: auto;
+	font-family: "Arial", sans-serif;
+	
+}
+
+.aggNota {
+	background-color: #fef49c;
+}
+
+.popClose {
+	z-index: 1000;
+	background-color: #f3e145;
+	width: 210px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: right;
+	font-size: 0.8em;
+	-moz-box-shadow: 0px 2px 4px #bbbbbb;
+	-webkit-box-shadow: 0px 2px 4px #bbbbbb;
+	box-shadow: 0px 2px 4px #bbbbbb;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb,direction=125,strength=5)\""); 
+ 	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb, direction=125, strength=5)");
+}
+
+
+.popClose a {
+	color: white;
+}

@@ -1,0 +1,177 @@
+/* La classe popupContent viene usata da tutti i pop up, per cui attenzione */
+.popupContent {
+	padding: 1px;
+	background-color: #FFFFFF;
+	margin-top:-1px;
+	margin-left: -75px;
+	border: 1px solid #DDDDDD;
+}
+
+.dateBoxFormatError {
+	background: #ffcccc;
+}
+
+.dateBoxPopup {
+	z-index: 999;
+	font-size: 0.75em;
+}
+
+.gwt-DatePicker {
+		background-color: #FFFFFF;
+	margin-top:-1px;
+	margin-left: 1px;
+	border: 1px solid #DDDDDD;
+}
+
+.gwt-DatePicker td,.datePickerMonthSelector td:focus {
+	outline: none;
+	border: 5px solid #FFFFFF;
+}
+
+.datePickerDays {
+	background-color: #EEEEEE;
+}
+
+.datePickerDay,.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	text-align: center;
+	padding: 5px;
+	outline: none;
+	color: #333;
+}
+
+.datePickerWeekdayLabel,.datePickerWeekendLabel {
+	background: #fff;
+	cursor: default;
+	color: #444;
+	font-size: 80%;
+	font-weight: normal;
+	text-align:center;
+}
+
+.datePickerDay {
+	padding: 4px 7px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.datePickerDayIsWeekend {
+	
+}
+
+.datePickerDayIsFiller {
+	color: #ccc;
+	font-weight: normal;
+	background-color: #FFF;
+}
+
+.datePickerDayIsValue {
+	background: #d7dfe8;
+}
+
+.datePickerDayIsDisabled {
+	color: #AAAAAA;
+	font-style: italic;
+}
+
+.datePickerDayIsHighlighted {
+	background: #FFFFCC;
+}
+
+.datePickerDayIsValueAndHighlighted {
+	background-color: #d7dfe8;
+}
+
+.datePickerDayIsToday {
+	padding: 3px;
+	color: #3A6AAD;
+	font-weight: bold;
+}
+
+.datePickerMonthSelector {
+	width: 100%;
+	padding: 1px 0 5px 0;
+	background-color: #3A6AAD;
+	font-size: 1.1em;
+}
+
+td.datePickerMonth {
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	font-size: 100%;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.datePickerPreviousButton,.datePickerNextButton {
+	font-size: 120%;
+	line-height: 1em;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0px 4px;
+	outline: none;
+}
+
+
+.peoplebox {
+ background:white;
+ height:37px;
+ padding:0px 4px 0px 4px;
+ border: 1px solid #060b15;
+ border-top-left-radius: 5px 5px;
+ border-top-right-radius: 5px 5px;
+ border-bottom-left-radius: 5px 5px;
+ border-bottom-right-radius: 5px 5px;
+ margin-right:10px;
+ cursor:text;
+}
+
+.peoplebox-input {
+border:0px;
+outline:none;
+padding:6px;
+font-size:inherit;
+}
+.peoplebox-peopledisplay {
+background:#060b15;
+color:#f1f1f1;
+border-top-left-radius: 5px 5px;
+border-top-right-radius: 5px 5px;
+border-bottom-left-radius: 5px 5px;
+border-bottom-right-radius: 5px 5px;
+padding:0xp 2px 0px 2px;
+height:16px;
+margin-right:5px;
+margin-top:5px;
+}
+.gwt-SuggestBoxPopup {
+background:white;
+border-top-left-radius: 5px 5px;
+border-top-right-radius: 5px 5px;
+border-bottom-left-radius: 5px 5px;
+border-bottom-right-radius: 5px 5px;
+border: 1px solid #060b15;
+}
+.gwt-SuggestBoxPopup .item {
+
+}
+.gwt-SuggestBoxPopup .item-selected {
+background:#060b15;
+ color:#f1f1f1; 
+}
+.suggestBoxPopup{
+	z-index: 999;
+ background:white;
+ height:37px;
+ padding:0px 4px 0px 4px;
+ border: 1px solid #060b15;
+ border-top-left-radius: 5px 5px;
+ border-top-right-radius: 5px 5px;
+ border-bottom-left-radius: 5px 5px;
+ border-bottom-right-radius: 5px 5px;
+ margin-right:10px;
+ cursor:text;
+}

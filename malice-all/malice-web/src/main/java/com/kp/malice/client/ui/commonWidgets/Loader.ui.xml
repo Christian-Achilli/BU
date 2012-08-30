@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<div ui:field="opacizedDiv"
+			style="overflow: auto; position: fixed; height:100%; width: 100%; z-index: 999; filter:literal('alpha(opacity=30)'); opacity: 0.3; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(opacity=30)'; background-color: grey;" />
+		<img ui:field="loaderImage" src="img/circleLoader.gif"
+			style="position: fixed; left:49%; top:49%;z-index: 1000" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

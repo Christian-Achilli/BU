@@ -1,0 +1,11 @@
+.tickLabel{
+	color: #000;
+}
+.placeholder{
+	font-size: 0.85em;
+	width: 840px;
+	height: 400px;
+	float: left;
+	margin-left: 70px;
+	margin-right: 70px;
+}

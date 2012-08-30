@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:l="urn:import:com.kp.malice.client.tabTitoli" xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets">
+	<g:HTMLPanel>
+		<l:TitoliTitoli ui:field="titoliTitoli" />
+		<l:TitoliInserimento ui:field="titoliInserimento" />
+		<l:TitoliDettaglio ui:field="titoliDettaglio" />
+		<f:FooterWidget/>
+	</g:HTMLPanel>
+</ui:UiBinder>

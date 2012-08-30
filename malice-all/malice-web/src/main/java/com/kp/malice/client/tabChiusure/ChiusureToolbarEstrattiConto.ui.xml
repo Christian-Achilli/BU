@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.commonWidgets">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.button {
+			color: #FFFFFF;
+			cursor: pointer;
+			display: block;
+			font-size: 0.72em;
+			font-weight: bold;
+			height: 27px;
+			margin-top: 18px;
+			width: 100%;
+		}
+		
+		.statoBox {
+			width: 96px;
+			vertical-align: center;
+		}
+		
+		.statoImgBox {
+			background-position: center center;
+			padding-top: 5px;
+			padding-left: 8px;
+		}
+		
+		.numBox {
+			width: 56px;
+		}
+		
+		.euroBox {
+			width: 110px;
+		}
+		
+		.dataBox {
+			width: 90px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div class="{resources.main.separatore}  {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar}">
+					<h1>Chiusura</h1>
+					<g:Label ui:field='mese' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.statoBox}">
+					<h1>Stato</h1>
+					<g:Label ui:field='stato' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.numBox}">
+					<h1>Num E/C</h1>
+					<g:Label ui:field='numEstrattoConto' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.numBox}">
+					<h1>Num Titoli</h1>
+					<g:Label ui:field='numTitoli' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.euroBox}">
+					<h1>Tot Premi</h1>
+					<g:Label ui:field='premi' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.euroBox}">
+					<h1>Tot Commissioni</h1>
+					<g:Label ui:field='commissioni' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.firstBoxToolbar} {style.dataBox}">
+					<h1>Data Invio</h1>
+					<g:Label ui:field='dataInvio' />
+				</div>
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div class="{resources.main.separatore}" />
+				<div class="{resources.main.smallButtonsContainer}">
+					<g:Button ui:field='indietroButton'
+						stylePrimaryName="{resources.main.firstSmallRightButton} {resources.main.backButton}"
+						title="Indietro" />
+					<g:Button ui:field='downloadButton'
+						stylePrimaryName="{resources.main.secondSmallRightButton} {resources.main.downloadButton}"
+						title="Download Lista Estratti Conto" />
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

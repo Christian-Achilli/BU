@@ -1,0 +1,95 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:r="urn:import:com.kp.marsh.ebt.client.webapp.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+
+
+	<ui:with field="resources" type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+
+	<g:HTMLPanel>
+
+		<div class="{resources.mainStructure.header}">
+			<div class="{resources.mainStructure.navigation}">
+				<div class="{resources.mainStructure.logoBox}">
+					<a>
+						<g:Image resource="{resources.marshLogo}" width="25"
+							height="25" />
+					</a>
+				</div>
+				<div class="{resources.mainStructure.userBox}">
+					Welcome
+					<span ui:field="loggedUser" />
+				</div>
+				<!-- LOGOUT -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image ui:field="logout" resource="{resources.logout_U}"
+							width="25" height="25" />
+					</a>
+				</div>
+				<!-- PILLOLA -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.pillola_A}" ui:field="pillolaOn" />
+						<g:Image resource="{resources.pillola_U}" ui:field="pillolaOff"/>
+					</a>
+				</div>
+				<!-- MANOMETRI -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.gauge_A}" ui:field="gaugesOn" />
+						<g:Image resource="{resources.gauge_U}" ui:field="gaugesOff" />
+					</a>
+				</div>
+				<!-- ISTOGRAMMI -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.istogramOn}" ui:field="histogramOn" />
+						<g:Image resource="{resources.istogramOff}" ui:field="histogramOff" />
+					</a>
+				</div>
+				<!-- NAVIGATION ICON -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.navigationBoxOn}" ui:field="navigationBoxOn" />
+						<g:Image resource="{resources.navigationBoxOff}" ui:field="navigationBoxOff" />
+					</a>
+				</div>
+				<!-- TOTALI -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.total_A}" ui:field="totaliLOBVisibili" />
+						<g:Image resource="{resources.total_U}" ui:field="totaliLOBNascosti" />
+					</a>
+				</div>
+				<!-- TUTORIAL -->
+				<div class="{resources.mainStructure.pulsBox}">
+					<a>
+						<g:Image resource="{resources.help_A}" ui:field="tutorialOn" />
+						<g:Image resource="{resources.help_U}" ui:field="tutorialOff" />
+					</a>
+				</div>
+			</div>
+			<div class="{resources.mainStructure.totalBox}" ui:field="totalBox">
+				<div class="{resources.mainStructure.totalCont}">
+					<r:TotalsSumUp ui:field="totalsSumUp" />
+				</div>
+			</div>
+			<!-- NAVIGATION LISTBOX -->
+			<div class="{resources.mainStructure.totalBox}" ui:field="navigationBox">
+				<div class="{resources.mainStructure.totalCont}">
+					<r:NavigationBoxWidget ui:field="navigationBoxWidget" />
+				</div>
+			</div>
+		</div>
+
+		<!--div per video tutorial -->
+		<div ui:field="videoBox">
+			<div class="{resources.mainStructure.videoTutorialBox}">
+				<g:VerticalPanel ui:field="videoTutorial" />
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+
+</ui:UiBinder>

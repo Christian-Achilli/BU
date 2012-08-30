@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:ImportDataSet xsi:schemaLocation="http://tempuri.org/ImportDataSet.xsd Schema0806.xsd" xmlns:mstns="http://tempuri.org/ImportDataSet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<mstns:Document mstns:ModuleType="B" mstns:LastUpdatedDate="2012-03-16">
+		<mstns:BindingAuthorityDetails>
+			<mstns:BARefDate>2011-11-15</mstns:BARefDate>
+			<mstns:BARefNo>5</mstns:BARefNo>
+			<mstns:BABrokersRef>992200111A</mstns:BABrokersRef>
+			<mstns:BAPseudonym>BDB</mstns:BAPseudonym>
+			<mstns:BANumber>312</mstns:BANumber>
+			<mstns:BAcorr_Pin1>110081</mstns:BAcorr_Pin1>
+			<mstns:BAcorr_Pin2>JAS</mstns:BAcorr_Pin2>
+			<mstns:Intermediary_Pin_type>EN-LC</mstns:Intermediary_Pin_type>
+			<mstns:Intermediary_Pin>176907</mstns:Intermediary_Pin>
+		</mstns:BindingAuthorityDetails>
+		<mstns:DocumentReferences>
+			<mstns:CertificateICNumber>A7RCA06338D</mstns:CertificateICNumber>
+			<mstns:ICNumber></mstns:ICNumber>
+			<mstns:ICStatus>1</mstns:ICStatus>
+			<mstns:ICType>
+				<mstns:DocumentType>0</mstns:DocumentType>
+			</mstns:ICType>
+			<mstns:CoverholderPrintableReference></mstns:CoverholderPrintableReference>
+			<mstns:RenewedICNumber></mstns:RenewedICNumber>
+			<mstns:OriginalICNumber></mstns:OriginalICNumber>
+			<mstns:RelatedInceptionDate>0001-01-01</mstns:RelatedInceptionDate>
+			<mstns:RelatedInceptionTime>00:00</mstns:RelatedInceptionTime>
+			<mstns:RelatedExpiryDate>0001-01-01</mstns:RelatedExpiryDate>
+			<mstns:RelatedExpiryTime>00:00</mstns:RelatedExpiryTime>
+		</mstns:DocumentReferences>
+		<mstns:PolicyholderDetails>
+			<mstns:FiscalCode>00539680140</mstns:FiscalCode>
+			<mstns:GenderType>C</mstns:GenderType>
+			<mstns:CompanyName>Fondazione Cassa di Riposo Ambrosetti</mstns:CompanyName>
+			<mstns:AddressLine1>Via Paravicini, 16</mstns:AddressLine1>
+			<mstns:AddressLine2></mstns:AddressLine2>
+			<mstns:City>Morbegno</mstns:City>
+			<mstns:PostCode>23017</mstns:PostCode>
+			<mstns:Region>SO</mstns:Region>
+			<mstns:Country>Italia</mstns:Country>
+		</mstns:PolicyholderDetails>
+		<mstns:CertificateSecurityDetails>
+			<mstns:SecurityType>1</mstns:SecurityType>
+			<mstns:LloydsPercentage>100</mstns:LloydsPercentage>
+			<mstns:LloydsSecurityDetails>
+				<mstns:SyndicateCode>2012</mstns:SyndicateCode>
+				<mstns:SyndicateShare>100</mstns:SyndicateShare>
+			</mstns:LloydsSecurityDetails>
+		</mstns:CertificateSecurityDetails>
+		<mstns:CertificateDateTimeDetails>
+			<mstns:InceptionDate>2012-06-30</mstns:InceptionDate>
+			<mstns:InceptionTime>24:00</mstns:InceptionTime>
+			<mstns:ExpiryDate>2013-06-30</mstns:ExpiryDate>
+			<mstns:ExpiryTime>24:00</mstns:ExpiryTime>
+			<mstns:ProposalDate>2012-06-28</mstns:ProposalDate>
+			<mstns:TacitRenewal>false</mstns:TacitRenewal>
+		</mstns:CertificateDateTimeDetails>
+		<mstns:RiskPremiumDetails>
+			<mstns:BusinessType>4</mstns:BusinessType>
+			<mstns:RiskReference>4.215</mstns:RiskReference>
+			<mstns:Premium>2560.00</mstns:Premium>
+			<mstns:Accessori>256.00</mstns:Accessori>
+			<mstns:Tax>626.56</mstns:Tax>
+			<mstns:Gross>3442.56</mstns:Gross>
+			<mstns:Premium_Commission_Perc>17.5</mstns:Premium_Commission_Perc>
+			<mstns:Accessori_Commission_Perc>100</mstns:Accessori_Commission_Perc>
+		</mstns:RiskPremiumDetails>
+		<mstns:TotalPremiumDetails>
+			<mstns:Currency>Euro</mstns:Currency>
+			<mstns:Premium>2560.00</mstns:Premium>
+			<mstns:Accessori>256.00</mstns:Accessori>
+			<mstns:Tax>626.56</mstns:Tax>
+			<mstns:Gross>3442.56</mstns:Gross>
+			<mstns:Premium_Commission_Amount>448.00</mstns:Premium_Commission_Amount>
+			<mstns:Accessori_Commission_Amount>256.00</mstns:Accessori_Commission_Amount>
+			<mstns:NumberOfInstalments>1</mstns:NumberOfInstalments>
+		</mstns:TotalPremiumDetails>
+		<mstns:Instalments>
+			<mstns:InstalmentNumber>1</mstns:InstalmentNumber>
+			<mstns:InstalmentDate>2012-06-30</mstns:InstalmentDate>
+			<mstns:Premium>2560.00</mstns:Premium>
+			<mstns:Accessori>256.00</mstns:Accessori>
+			<mstns:Tax>626.56</mstns:Tax>
+			<mstns:Gross>3442.56</mstns:Gross>
+			<mstns:Premium_Commission_Amount>448.00</mstns:Premium_Commission_Amount>
+			<mstns:Accessori_Commission_Amount>256.00</mstns:Accessori_Commission_Amount>
+		</mstns:Instalments>
+		<mstns:CertificateConditions>
+			<mstns:PolicyDescription>RC Amministratori e Sindaci</mstns:PolicyDescription>
+			<mstns:GeneralConditions>D&amp;O MITHRAS</mstns:GeneralConditions>
+			<mstns:SpecialConditions>vedi scheda copertura</mstns:SpecialConditions>
+			<mstns:PaymentPlanDescription></mstns:PaymentPlanDescription>
+		</mstns:CertificateConditions>
+		<mstns:CertificateAttachments>
+		</mstns:CertificateAttachments>
+	</mstns:Document>
+</mstns:ImportDataSet>

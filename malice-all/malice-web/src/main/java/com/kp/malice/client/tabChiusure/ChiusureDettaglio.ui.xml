@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client" xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets"
+	xmlns:k="urn:import:com.kp.malice.client.ui.resources">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.myTable {
+			margin-left: 70px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 0.7em;
+			float: left;
+		}
+		
+		.myTable td {
+			padding-right: 5px;
+		}
+		
+		.title {
+			clear: right;
+			color: #777;
+			font-size: 1.2em;
+			font-weight: bold;
+			margin-bottom: 22px;
+		}
+		
+		.bottoni,.bottoni:HOVER {
+			color: white;
+			width: 100px;
+			height: 30px;
+			font-size: 0.75em;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 16px;
+			display: block;
+			cursor: pointer;
+			float: right;
+			margin-top: 6px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.contentContainer}  {resources.main.height488}">
+			<div class="{resources.main.tableContainer}">
+				<div class="{style.title}">Storico Chiusure</div>
+				<c:CellTable ui:field='cellTableChiusure' />
+			</div>
+			<div>
+				<k:SimplePagerMalice stylePrimaryName='{style.myTable}'
+					ui:field='pagerChiusure' />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

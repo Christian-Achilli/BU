@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:r="urn:import:com.kp.marsh.ebt.client.webapp.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:with field="resources" type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+	<g:HTMLPanel>
+	
+		<r:LoaderWidget ui:field="loaderWidget"></r:LoaderWidget>
+		<div class="{resources.mainStructure.wrapper}" ui:field="appWrapper">
+			<!-- TODO BARRA APP deve diventare un widget configurabile e che contiene le combo per la navigazione. -->
+			<div class="{resources.mainStructure.contentBox}">
+				<div class="{resources.mainStructure.blackBandSX}">
+					<span ui:field="ufficio">UFFICIO &gt; <span class="{resources.mainStructure.statusBarDescription}" ui:field="descrUff"></span></span>
+					<span ui:field="ce">&nbsp;&nbsp;&nbsp;&nbsp;CLIENT EXECUTIVE &gt; <span class="{resources.mainStructure.statusBarDescription}" ui:field="descrCe"></span></span>
+					<span ui:field="gc">&nbsp;&nbsp;&nbsp;&nbsp;GRUPPO COMMERCIALE &gt; <span class="{resources.mainStructure.statusBarDescription}" ui:field="descrGc"></span></span>
+				</div>
+<!-- 				<div class="{resources.mainStructure.blackBandDX}"></div> -->
+				<div class="{resources.mainStructure.appBoxGauges}">
+					<g:Grid ui:field="rootElement"></g:Grid>
+				</div> <!-- chiude app box -->
+			</div> <!-- chiude content box -->
+			<div class="{resources.mainStructure.footer}">
+				<div class="{resources.mainStructure.address}">Powered by KUBE PARTNERS</div>
+			</div>
+		</div> <!-- chiude wrapper -->
+
+	</g:HTMLPanel>
+</ui:UiBinder>

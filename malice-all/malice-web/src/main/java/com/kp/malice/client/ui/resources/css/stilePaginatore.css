@@ -1,0 +1,16 @@
+.button {
+	margin: 3px;
+	cursor: pointer;
+}
+.button a:hover{
+	background-image: url("img/green_botton.png");
+}
+
+.disabledButton {
+	margin: 3px;
+}
+
+.pageDetails {
+	margin: 3px;
+}
+

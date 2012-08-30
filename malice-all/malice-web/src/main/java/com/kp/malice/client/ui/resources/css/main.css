@@ -1,0 +1,903 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MaLICE
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+/* RESET */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input
+	{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+fieldset,img {
+	border: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+table {
+	border: 0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/* RESET */
+/* BODY */
+html,body {
+	height: 100%;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	font-style: normal;
+	color: #333333;
+	font-size: 1em;
+	font-weight: normal;
+	background-color: #F6F6F6;
+}
+
+/* BODY */
+/* STRUCTURE */
+.agenteLayout {
+	z-index: 990;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 140px;
+}
+
+.headWrapper {
+	width: 100%;
+	position: fixed;
+	z-index: 990;
+	background-image: url(img/headBkg.png);
+	background-repeat: repeat-x;
+	/* 	height: 100px; */
+	left: 0px;
+	top: 0px;
+}
+
+.headContainer {
+	padding: 0px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100px;
+}
+
+.toolbarContainer {
+	background-image: url(img/headBkgGrey.png);
+	background-repeat: repeat-x;
+	height: 64px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 100px;
+	z-index: 999;
+}
+
+.divComparsa {
+	clip: auto;
+	background-color: #FFF;
+	z-index: 999;
+	padding-top: 15px;
+	width: 965px;
+}
+
+.toolsContainer {
+	position: fixed;
+	left: 50%;
+	width: 960px;
+	margin-left: -480px;
+	float: left;
+	clear: both;
+	height: 60px;
+}
+
+.logo {
+	padding: 0px;
+	float: left;
+	height: 35px;
+	width: 80px;
+	background-image: url(img/realeLogo.png);
+	background-repeat: repeat;
+	background-position: 0px 0px;
+	margin-top: 19px;
+}
+
+.topTab {
+	float: left;
+	width: auto;
+	margin-top: 8px;
+	background-image: url(img/endtabBkg.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 1px;
+}
+
+.userContainer {
+	float: right;
+	margin-top: 7px;
+}
+
+.rifWidgLeft {
+	float: left;
+	width: 10%;
+	padding-right: 5%;
+	padding-left: 5%;
+	background-image: url(img/bigvertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	text-align: left;
+	height: 100%;
+}
+
+.rifWidgLeft h1 {
+	font-size: 0.68em;
+	color: #777;
+	margin-top: 15px;
+}
+
+.rifWidgLeft p {
+	font-size: 1em;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 1px;
+}
+
+.rifWidgRight {
+	float: left;
+	width: 10%;
+	padding-right: 5%;
+	padding-left: 5%;
+	text-align: right;
+	height: 100%;
+	background-image: url(img/bigvertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.rifWidgRight h1 {
+	font-size: 0.68em;
+	color: #777;
+	margin-top: 15px;
+}
+
+.rifWidgRight p {
+	font-size: 1em;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 1px;
+}
+
+.height488 {
+	height: 440px;
+}
+.height465 {
+	height: 464px;
+}
+
+.contentContainer {
+	width: 100%;
+	background-image: url(img/contentBkg.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+	float: left;
+	/* 	position: relative; */
+	padding-bottom: 0px;
+	padding-top: 24px;
+}
+
+.padTopBigforContentContainer {
+	padding-top: 64px;
+}
+.padTopMiddleforContentContainer {
+	padding-top: 40px;
+}
+
+.contentFooter {
+	background-image: url(img/footerBkg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-attachment: scroll;
+	width: 100%;
+	height: 40px;
+	float: right;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.lloydsLogo {
+	background-image: url(img/lloyds.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	height: 15px;
+	width: 65px;
+	margin-left: 70px;
+	margin-top: 15px;
+}
+
+.kubeCopy {
+	float: left;
+	margin-left: 70px;
+	margin-top: 9px;
+	font-size: 0.6em;
+	color: #C0C0C0;
+}
+
+/* STRUCTURE */
+/* TABS */
+ul.topBar {
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+}
+
+ul.topBar li {
+	float: left;
+	margin: 0px;
+	background-attachment: scroll;
+	background-image: url(img/tabBkg.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	cursor: pointer;
+}
+
+ul.topBar li a {
+	color: #FFF;
+	padding-right: 20px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	height: 27px;
+	display: block;
+	background-image: url(img/last.png);
+	background-repeat: no-repeat;
+	background-position: right 2px;
+	cursor: pointer;
+}
+
+ul.topBar li.selected {
+	background-attachment: scroll;
+	background-image: url(img/tabBkg_selected.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+ul.topBar li.selected a {
+	background-image: url(img/endtab_selected.png);
+	background-repeat: no-repeat;
+	background-position: right 2px;
+	cursor: pointer;
+}
+/* TABS */
+/* USERBAR */
+ul.userBar {
+	font-size: 0.7em;
+	font-weight: normal;
+}
+
+ul.userBar li {
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+ul.userBar li a {
+	display: block;
+	text-transform: uppercase;
+}
+
+ul.userBar li.usrLogged a {
+	color: #FFF;
+	padding-right: 10px;
+	background-image: url(img/vertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+ul.userBar li.logOut a {
+	color: #68BCFF;
+	padding-right: 10px;
+	background-image: url(img/vertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-left: 10px;
+}
+
+ul.userBar li.adminUsr a {
+	color: #14284F;
+	padding-right: 10px;
+	background-image: url(img/vertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-left: 10px;
+}
+
+ul.userBar li.help a {
+	color: #FFCC33;
+	padding-left: 10px;
+}
+
+/* USERBAR */
+/* WIDGBOX */
+.downloadElement {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+}
+
+.downloadElementImage {
+	float: right;
+}
+
+ul.widgBox {
+	font-size: 0.75em;
+	font-weight: normal;
+	width: 100%;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #BCBCBC;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	background-color: #F4F4F4;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+ul.widgBox li {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+}
+
+ul.widgBox li a {
+	background-image: url(img/iconDownload.png);
+	background-position: 205px center;
+	background-repeat: repeat;
+}
+
+ul.widgBox li a:hover {
+	background-image: url(img/iconDownloadHover.png);
+}
+
+.bigvertLinesBackground {
+	background-image: url("img/bigvertLines.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.elementiChiusure {
+	background-image: url("img/bigvertLines.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	float: left;
+	height: 60px;
+	padding-left: 3%;
+	padding-right: 3%;
+	text-align: left;
+	width: 10.6666667%;
+}
+
+.elementiChiusure h1 {
+	font-size: 0.68em;
+	color: #777;
+	margin-top: 15px;
+}
+
+.elementiChiusure div {
+	font-size: 1em;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 1px;
+}
+
+.firstBoxToolbar {
+	float: left;
+	height: 60px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: left;
+	width: 92px;
+}
+
+.elementiTrovatiStopPlay {
+	background-image: url("img/bigvertLines.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	float: left;
+	height: 60px;
+	padding-left: 40px;
+	padding-right: 36px;
+	text-align: left;
+	width: 12%;
+}
+
+}
+.firstBoxToolbar h1 {
+	font-size: 0.68em;
+	color: #777;
+	margin-top: 15px;
+}
+
+.firstBoxToolbar div {
+	font-size: 1em;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 1px;
+}
+
+.calendarioTitoli {
+	background-image: url(img/bigvertLines.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.calendario {
+	float: left;
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: left;
+	height: 100%;
+}
+
+.calendario h1 {
+	font-size: 0.68em;
+	color: #777;
+	float: left;
+	margin-top: 23px;
+	margin-right: 5px;
+}
+
+.calendario h2 {
+	font-size: 0.68em;
+	color: #777;
+	float: left;
+	margin-top: 23px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.calendario input {
+	background-image: url('img/boxInput_small.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0px solid #d7d7d7;
+	width: 85px;
+	font-size: 0.7em;
+	padding: 5px;
+	height: 16px;
+	margin-top: 17px;
+	text-align: center;
+	float: left;
+}
+
+.calendario table {
+	float: left;
+}
+
+.listBox {
+	float: left;
+}
+
+/* START TOOLBARS */
+.genericButtonToolbars {
+	text-align: center;
+	padding-top: 32px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 45px;
+	font-size: 0.8em;
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFF;
+	margin-right: 12px;
+	padding-top: 59px;
+}
+
+.sendButton {
+	background-image: url(img/sendButton.png);
+}
+
+.addButton {
+	background-image: url(img/addButton.png);
+}
+
+.backButton {
+	background-image: url(img/backButton.png);
+}
+.premiButton {
+	background-image: url(img/premi.png);
+}
+.montanteButton {
+	background-image: url(img/montante.png);
+}
+
+/* END TOOLBARS */
+.searchContainer {
+	float: left;
+	text-align: left;
+	height: 100%;
+	margin-left: 89px;
+	margin-right: 89px;
+}
+
+.searchContainer input {
+	float: left;
+	background-image: url('img/searchBkg.png');
+	border: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 140px;
+	font-size: 0.7em;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 16px;
+	margin-top: 17px;
+	background-color: transparent;
+}
+
+.searchContainer select {
+	float: left;
+	width: 119px;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+
+.searchContainer img {
+	margin-left: -30px;
+	margin-top: 21px;
+	position: absolute;
+	z-index: 990;
+	cursor: pointer;
+}
+
+/* css per table */
+.tableContainer {
+	width: 488px;
+	width: 840px;
+	margin-right: 70px;
+	margin-left: 70px;
+	font-size: 0.75em;
+}
+
+.didascalia {
+	float: right;
+	margin-right: 70px;
+	margin-top: 29px;
+	margin-bottom: 15px;
+	font-size: 0.7em;
+	color: #555;
+}
+
+.didascalia img {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.didascaliaStatistiche {
+	float: right;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	margin-right: 75px;
+	font-size: 0.7em;
+	color: #555;
+}
+
+.didascaliaStatistiche img {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+/* Bottone */
+button {
+	background-image: url('img/grey_botton.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	border: none;
+	color: transparent;
+}
+
+.suggestBox {
+	z-index: 999;
+}
+
+/* Status Pop Up */
+.statusPopUp {
+	background-image: url('img/popBkg.png');
+	background-position: top center;
+	background-attachment: scroll;
+	width: 160px;
+	height: 35px;
+	margin-left: -52px;
+	margin-top: 17px;
+}
+
+.statusPopUp td {
+	padding-top: 13px;
+}
+
+/* ultima colonna tabella chiusure */
+.columnRightAlign {
+	text-align: right;
+	padding-right: 18px;
+}
+
+.columnRightAlign {
+	text-align: right;
+	padding-right: 18px;
+}
+
+/* ultima colonna tabella titoli */
+.columnStatoTitolo {
+	text-align: center;
+}
+/* sezione downloa doducmenti */
+.downloadDoc {
+	font-size: 0.75em;
+	font-weight: normal;
+	width: 100%;
+	margin-top: 15px;
+	background-color: #FFF;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 15px;
+	color: #888;
+}
+
+.downloadDocTd {
+	width: 208px;
+	color: #444;
+}
+
+.downloadVideo {
+	font-size: 0.75em;
+	font-weight: normal;
+	width: 100%;
+	background-color: #FFF;
+	padding-left: 15px;
+	color: #888;
+}
+
+.downloadVideoTd {
+	width: 208px;
+	color: #444;
+}
+
+.imageHrefDownloadDoc {
+	background-image: url('img/iconDownload.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 7px;
+}
+
+.imageHrefDownloadDoc img:HOVER {
+	background-image: url('img/iconDownloadHover.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.imageHrefVideo {
+	background-image: url('img/iconVideo.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-top: 10px;
+}
+
+.imageHrefVideo img:HOVER {
+	background-image: url('img/iconVideoHover.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.bigButton {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 160px;
+	height: 27px;
+	font-size: 0.72em;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFF;
+	float: left
+}
+
+.smallButton {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 130px;
+	height: 27px;
+	font-size: 0.72em;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFF;
+	float: left
+}
+
+.redButton {
+	background-image: url(img/redTextButton.png);
+}
+
+.greenButton {
+	background-image: url(img/greenTextButton.png);
+}
+
+.greyButton {
+	background-image: url(img/greyTextButton.png);
+}
+
+.downloadButton {
+	background-image: url(img/downloadButton.png);
+}
+
+.bigButtonsContainer {
+	float: right;
+	margin-top: 16px;
+	width: 160px;
+}
+
+.smallButtonsContainer {
+	float: right;
+	height: 60px;
+	width: 92px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.tabellaDivComparsa {
+	color: #000;
+	font-size: 0.85em;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 13px;
+	width: 615px;
+	height: 35px;
+	vertical-align: top;
+	float: left;
+}
+
+.tabellaDivComparsa th {
+	text-align: left;
+	font-size: 0.8em;
+	color: #777;
+}
+
+.annullaButton {
+	background-image: url(img/cancButton.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.annullaConfermaWidget {
+	float: right;
+}
+
+.annullaConfermaTd {
+	vertical-align: top;
+	height: 27px;
+}
+
+.redInput {
+	background-color: #FFFFFF;
+	border: 1px solid #FF0000;
+	width: 52px;
+	height: 12px;
+}
+
+.blueInput {
+	background-color: #FFF;
+	border: 1px solid #7F9DB9;
+	color: #000;
+}
+
+.greenInput {
+	background-color: #FFFFFF;
+	border: 1px solid #54FF4F;
+	height: 12px;
+}
+
+/* ultima colonna tabella incassi */
+.columnIncassiStatoTitolo {
+	text-align: right;
+	margin-tight: 10px;
+}
+
+.columnIncassiNumeroTitolo {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.firstSmallRightButton {
+	cursor: pointer;
+	width: 40px;
+	height: 27px;
+	margin-top: 18px;
+	float: left;
+}
+
+.editButton {
+	background-image: url("img/editButton.png");
+}
+
+.secondSmallRightButton {
+	cursor: pointer;
+	width: 40px;
+	height: 27px;
+	margin-top: 18px;
+	margin-left: 12px;
+	float: right;
+}
+
+.separatore {
+	background-image: url("img/bigvertLines.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	width: 2px;
+	height: 60px;
+	float: right;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.tdCentrato {
+	text-align: center;
+	width: 100%;
+}
+
+.confirmButton {
+	background-image: url(img/confButton.png);
+}
+
+.divPaginatoreDidascalia {
+	background-color: #F6F6F6;
+	height: 40px;
+	margin-left: 70px;
+	margin-right: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 820px;
+}
+
+.noBorder {
+	border-color: #D4D4D4;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.heightCombo {
+	height: 17px;
+}

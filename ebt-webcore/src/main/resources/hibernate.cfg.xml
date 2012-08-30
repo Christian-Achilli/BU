@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "Http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+
+		<property name="hibernate.connection.password">marsh</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/marsh_dev</property>
+		<property name="hibernate.connection.username">marsh_dev</property>
+
+<!-- 		<property name="hibernate.connection.datasource">java:comp/env/jdbc/marshdbint</property> -->
+
+		<!-- <property name="hibernate.connection.datasource">java:comp/env/jdbc/marshdbprd</property> -->
+
+
+		<!--<property name="hibernate.connection.charSet">ISO-8859-1</property> 
+			JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+		<property name="current_session_context_class">jta</property>
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<!-- Echo all executed SQL to stdout -->
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.use_sql_comments">false</property>
+		<property name="hibernate.format_sql">false</property>
+
+		<mapping
+			resource="com/kp/marsh/ebt/server/webapp/data/domain/BusinessInformation.hbm.xml" />
+		<mapping resource="com/kp/marsh/ebt/server/webapp/data/domain/InformationOwners.hbm.xml" />
+		<mapping
+			resource="com/kp/marsh/ebt/server/webapp/data/domain/MarshPeopleCredentials.hbm.xml" />
+		<mapping resource="com/kp/marsh/ebt/server/webapp/data/domain/Products.hbm.xml" />
+		<mapping resource="com/kp/marsh/ebt/server/webapp/data/domain/ReferenceYears.hbm.xml" />
+		
+		<mapping class="com.kp.marsh.ebt.server.importer.model.MActuals" />
+		<mapping class="com.kp.marsh.ebt.server.importer.model.MAchieved" />
+		<mapping class="com.kp.marsh.ebt.server.importer.model.MOffCeAccounts" />
+		<mapping class="com.kp.marsh.ebt.server.importer.model.MEbtMapping" />
+	</session-factory>
+</hibernate-configuration>

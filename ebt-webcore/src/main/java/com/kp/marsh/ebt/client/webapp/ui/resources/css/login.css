@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* - - - - - - - - - - - - - - - - - - - - -
+Title:	MARSH_DASHBOARD
+Author:	Kube Partners
+URLs:	www.kubepartners.com
+- - - - - - - - - - - - - - - - - - - - - */
+html, body {
+	height:100%;
+}
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul, ol, li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+fieldset, img {
+	border: none;
+}
+caption, th {
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+td {
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+body {
+	font-family:"Arial", sans-serif;
+	font-style: normal;
+	color: #333333;
+	background-color: #F4F4F4;
+	font-size: 1em;
+	font-weight: normal;
+}
+a, a:link, a:hover, a:visited {
+	text-decoration: none;
+	color: #AAA;
+	cursor: pointer;
+}
+@sprite .header {
+	gwt-image: "headBkg";
+	width: auto;
+	height: auto;
+/*	background-image: url(../img/headBkg.png);*/
+	height: 53px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background-repeat: repeat-x;
+	background-position: left top;
+	z-index: 999;
+}
+.wrapper {
+	width:980px;
+	margin-top: 150px;
+	margin-bottom: 20px;
+	margin-left: -490px;
+	float: left;
+	position: absolute;
+	left: 50%;
+}
+@sprite .navigation {
+	gwt-image: "litteBand";
+	width: auto;
+	height: auto;
+/*	background-image: url(../img/litteBand.png);*/
+	background-repeat: no-repeat;
+	background-position: right top;
+	float: left;
+	height: 53px;
+/*	width: 904px;*/
+	margin-left: -452px;
+	position: absolute;
+	left: 50%;
+}
+@sprite .logoBox {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	float: left;
+/*	background-image: url(../img/litteBand.png);*/
+}
+.logoBox a img {
+	margin-top: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+@sprite .userBox {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 32px;
+	float: left;
+/*	background-image: url(../img/litteBand.png);*/
+	font-size: 0.75em;
+	color: #888888;
+	padding-top: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+@sprite .userBox img {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 32px;
+	float: left;
+/*	background-image: url(../img/litteBand.png);*/
+	font-size: 0.75em;
+	color: #888888;
+	padding-top: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.userBox span {
+	font-weight: bold;
+	color: #333333;
+}
+
+@sprite .pulsBox {
+	gwt-image: "litteBand";
+	width: auto;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	float: right;
+/*	background-image: url(../img/litteBand.png);*/
+}
+.pulsBox a img {
+	margin-top: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+@sprite .blackBandSX {
+	gwt-image: "blackBand";
+	height: auto;
+	width: auto;
+/*	background-image: url(../img/blackBand.png);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 32px;
+	width: 880px;
+	text-transform: uppercase;
+	color: #FFF;
+	padding-top: 18px;
+	padding-left: 20px;
+	float: left;
+}
+.blackBandSX span {
+	color: #999999;
+}
+@sprite .blackBandDX {
+	gwt-image: "blackBand";
+	width: auto;
+	height: auto;
+/*	background-image: url(../img/blackBand.png);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 32px;
+	width: 180px;
+	color: #999999;
+	padding-top: 18px;
+	padding-right: 20px;
+	float: right;
+	text-align: right;
+}
+.blackBandDX span {
+	color: #FFF;
+}
+.contentBox {
+	float: left;
+	width: 900px;
+	font-size: 0.8em;
+	height: auto;
+	background-color: #FFF;
+	margin-left: 40px;
+	margin-right: 40px;
+	-moz-box-shadow: 0px 2px 4px #bbbbbb;
+	-webkit-box-shadow: 0px 2px 4px #bbbbbb;
+	box-shadow: 0px 2px 4px #bbbbbb;
+	-ms-filter: literal("\"progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb,direction=125,strength=5)\""); /* IE8+ */
+	filter: literal("progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb, direction=125, strength=5)");
+}
+.loginBox {
+	float: left;
+	height: auto;
+	width: 860px;
+	z-index: 998;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.boxFormBig {
+	float: left;
+	width: 370px;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+.labelBox {
+	color: #93C241;
+	float: left;
+	margin-left: 0%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 100%;
+	padding-left: 0%;
+}
+.boxInputBig {
+	float: left;
+	padding-top: 5px;
+	width: 100%;
+}
+
+.footerModulo {
+	width: 860px;
+	color: #FFF;
+	float: left;
+	text-align: left;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+.pulsForgot a {
+	text-align: center;
+	width: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	color: #CCC;
+	text-decoration: none;
+	float: left;
+	margin-left: 30px;
+}
+.pulsForgot a:hover {
+	color: #666;
+}
+
+@sprite .pulsGreen a {
+/*	background: url("../img/greenPuls.png");*/
+	gwt-image: "greenPuls";
+	width: auto;
+	height: auto;
+	text-align: center;
+	height: auto;
+	width: 120px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	float: right;
+	margin-left: 0px;
+	margin-right: 30px;
+	font-size: 1.1em;
+}
+
+.pulsLoader {
+	width: auto;
+	height: auto;
+	text-align: center;
+	height: auto;
+	width: 120px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	float: right;
+	margin-left: 0px;
+	margin-right: 30px;
+	font-size: 1.1em;
+}
+
+.errMsg {
+	float: right;
+	color: red;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+@sprite .boxInputBig input {
+	gwt-image: "form_input";
+	width: auto;
+	height: auto;
+	color: #2d2d2d;
+	font-size: 1.25em;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 5px;
+	border: 1px solid #DDDDDD;
+/*	background-image: url(../img/form_input.gif);*/
+	background-repeat: repeat-x;
+	background-position: left top;
+	width: 365px;
+	letter-spacing: 0.1em;
+	font-family:'Arial', sans-serif;
+}

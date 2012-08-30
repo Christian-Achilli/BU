@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.colorizedLink:hover {
+			COLOR: blue;
+			TEXT-DECORATION: none;
+			font-weight: none
+		}
+		.colorizedLink {
+			COLOR: #C0C0C0;
+			TEXT-DECORATION: none;
+			font-weight: none
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.contentFooter}">
+			<div class="{resources.main.kubeCopy}">
+				powered by
+				<a href="http://www.kubepartners.com/" target="_blank" class="{style.colorizedLink}">KUBE PARTNERS</a>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

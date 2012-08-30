@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>Utility to post xml to Malice</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FDF5E6">
+<H2 ALIGN="CENTER">Send XML To Malice</H2>
+
+<script type="text/javascript">
+
+document.write("<p>");
+document.write("    <a name=\"contactustop\"><\/a><\/p>");
+document.write("<form action=\"http:\/\/");
+completeURL=window.location.host; 
+document.write(completeURL);
+document.write("\/malice\/xml\/receiver\"");
+document.write(" method=\"POST\" enctype=\"application\/x-www-form-urlencoded\">");
+document.write("<CENTER>");
+document.write("Copy here below the xml and press <INPUT TYPE=\"SUBMIT\"><\/BR>");
+document.write("<TEXTAREA style=\"width: 960px; height: 800px\" name=\"myXml\"><\/TEXTAREA>");
+document.write("<\/CENTER>");
+document.write("<\/form>");
+document.write();
+
+</script>
+</BODY>
+</HTML>

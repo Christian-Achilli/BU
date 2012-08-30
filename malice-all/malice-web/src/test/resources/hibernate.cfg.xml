@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<!-- 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property> -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name ="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name ="hibernate.current_session_context_class">thread</property>
+
+<!-- 		<property name="hibernate.connection.password">malice</property> -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/malice</property>
+<!-- 		<property name="hibernate.connection.url">jdbc:mysql://test-aws.cb396gbnfqxc.us-east-1.rds.amazonaws.com:3306/malice</property> -->
+ 		<property name="hibernate.connection.username">malice</property>
+		<property name="hibernate.connection.password">malice</property>
+
+		<!-- <property name="hibernate.connection.datasource">java:comp/env/jdbc/marshdbint</property> -->
+		<!-- <property name="hibernate.connection.datasource">java:comp/env/jdbc/marshdbprd</property> -->
+
+		<!--<property name="hibernate.connection.charSet">ISO-8859-1</property> 
+			JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+		<property name="current_session_context_class">jta</property>
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<!-- Echo all executed SQL to stdout -->
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.use_sql_comments">false</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.connection.autocommit">false</property> 
+	</session-factory>
+</hibernate-configuration>

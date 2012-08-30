@@ -1,0 +1,572 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:t="urn:import:com.kp.malice.client.tabTitoli" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client" xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets"
+	xmlns:u="urn:import:com.kp.malice.client.ui" xmlns:k="urn:import:com.kp.malice.client.ui.resources"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.main {
+			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
+			font-size: 0.75em;
+			color: #777;
+		}
+		
+		.premiTable {
+			width: 100%;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		
+		.premiTableTh {
+			color: #777;
+			width: 20%;
+			text-align: center;
+			border: 1px;
+			border-color: #DDD;
+			border-style: solid;
+			vertical-align: middle;
+		}
+		
+		.premiTableTd {
+			color: #777;
+			width: 20%;
+			text-align: center;
+			border: 1px;
+			border-color: #DDD;
+			border-style: solid;
+			vertical-align: bottom;
+		}
+		
+		.premiTableInput {
+			font-size: 1em;
+			border: none;
+			padding: 3px;
+			width: 80%;
+		}
+		
+		.generalTable {
+			width: 100%;
+			margin-top: 20px;
+		}
+		
+		.generalTable input {
+			font-size: 1em;
+			border: none;
+			padding: 3px;
+			width: 80%;
+		}
+		
+		.generalTable th {
+			color: #777;
+			width: 20%;
+			text-align: center;
+			border: 1px;
+			border-color: #DDD;
+			border-style: solid;
+			vertical-align: middle;
+		}
+		
+		.generalTable td {
+			color: #777;
+			width: 20%;
+			text-align: center;
+			border: 1px;
+			border-color: #DDD;
+			border-style: solid;
+			vertical-align: middle;
+		}
+		
+		.tableA3 {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		
+		.tableA3 input {
+			width: 100%;
+			border: none;
+		}
+		
+		.tableA3 td {
+			vertical-align: middle;
+			text-align: center;
+			border-width: 1px;
+			border-color: #DDD;
+			border-style: solid;
+			height: 19px;
+		}
+		
+		.tableA3 th {
+			vertical-align: middle;
+			text-align: center;
+			border-width: 1px;
+			border-color: #DDD;
+			border-style: solid;
+		}
+		
+		.noBorder {
+			border-left: none;
+			border-bottom: none;
+		}
+		
+		.tableNoBordi td {
+			width: 260px;
+		}
+		
+		.tableNoBordi input,select {
+			margin-bottom: 3%;
+		}
+		
+		.tableLateraleSX {
+			width: 100%;
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-top-color: #DDD;
+			height: 80px;
+			vertical-align: top;
+		}
+		
+		.tableLateraleDX {
+			width: 95%;
+			height: 160px;
+			vertical-align: top;
+			margin-left: 5%;
+		}
+		
+		.lastTable {
+			width: 100%;
+			margin-bottom: 30px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #DDD;
+		}
+		
+		.lastTable td{
+			padding: 1%;
+		}
+		.divLateraleDX {
+			width: 32%;
+			float: left;
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-top-color: #DDD;
+			border-left-width: 1px;
+			border-left-style: solid;
+			border-left-color: #DDD;
+			margin-left: 4%;
+			margin-top: 30px;
+		}
+		
+		.divLateraleSX {
+			margin-top: 30px;
+			width: 63%;
+			float: left;
+		}
+		
+		.alignMiddle {
+			text-align: center;
+		}
+		
+		.width30 {
+			width: 30%;
+		}
+		
+		.width40 {
+			width: 40%;
+		}
+		
+		.separatoreDiv {
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-top-color: #DDD;
+			width: 100%;
+			height: 1px;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		
+		.list {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		
+		.listNoTable {
+			height: 100%;
+			border: 1px solid #ddd;
+			padding: 3px;
+		}
+		.descrizioneFraz {
+			height: 100%;
+			border: 1px solid #ddd;
+			margin-bottom: 0px;
+		}
+		
+		.textBox {
+			border: 1px solid #ddd;
+			padding: 3px;
+			width: 150px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<t:TitoliToolbarInserimento ui:field="toolbarInserimentoTitolo" />
+		<div class="{resources.main.contentContainer}">
+			<g:ScrollPanel>
+				<g:HTMLPanel>
+					<div class="{style.main}">
+						<table class="{style.generalTable}">
+							<tbody>
+								<tr>
+									<th>Codice Ramo</th>
+									<th>Codice Correspon.</th>
+									<th>Codice Lloyd's Broker</th>
+									<th>Codice Doc. (*)</th>
+									<th>N. Cover Note / Binder</th>
+								</tr>
+								<tr>
+									<td>
+										<g:ListBox ui:field="codiceRamo" stylePrimaryName="{style.list}" />
+									</td>
+									<td>
+									</td>
+									<td>
+										<g:ListBox ui:field="codiceLb" stylePrimaryName="{style.list}" />
+									</td>
+									<td>
+										<g:ListBox ui:field="codiceDoc" stylePrimaryName="{style.list}" />
+									</td>
+									<td>
+										<g:TextBox ui:field="numeroBinderCovernote" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="{style.noBorder}"></td>
+									<td colspan="2">
+										F = Piazzamento Facoltativo (*)
+										<br />
+										B = Piazzamento su Binder
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Tipo di assicurazione :
+						<g:ListBox ui:field="ramo" stylePrimaryName="{style.listNoTable}" />
+						<br />
+						Il presente Modulo forma parte integrante del Contratto N°
+						<g:TextBox ui:field="numeroPolizza" />
+						<br />
+						<div class="{style.separatoreDiv}" />
+						<table class="{style.tableNoBordi}">
+							<tr>
+								<td>
+									Tipo contraente:
+								</td>
+								<td>
+									<g:ListBox ui:field="tipoContraente"
+										stylePrimaryName="{style.listNoTable}" />
+								</td>
+							</tr>
+							<tr>
+							</tr>
+							<tr>
+								<td>
+									Identificativo compagnia:
+								</td>
+								<td>
+									<g:TextBox ui:field="companyName" stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Nome dell’Assicurato o Contraente:
+								</td>
+								<td>
+									<g:TextBox ui:field="nomeContraente"
+										stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Cognome dell’Assicurato o Contraente:
+								</td>
+								<td>
+									<g:TextBox ui:field="cognomeContraente"
+										stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Indirizzo :
+								</td>
+								<td>
+									<g:TextBox ui:field="viaContraente" stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									CAP:̀
+								</td>
+								<td>
+									<g:TextBox ui:field="capContraente" stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Citta':̀
+								</td>
+								<td>
+									<g:TextBox ui:field="cittaContraente"
+										stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Codice Fiscale:
+								</td>
+								<td>
+									<g:TextBox ui:field="codiceFiscale" stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									P.IVA:
+								</td>
+								<td>
+									<g:TextBox ui:field="vatNumber" stylePrimaryName="{style.textBox}" />
+								</td>
+							</tr>
+						</table>
+						<div class="{style.separatoreDiv}" />
+						Durata dell’Assicurazione (con esclusione del tacito rinnovo)
+						dalle ore
+						24:00 del
+						<d:DateBox ui:field='dataEffettoPolizza' />
+						alle
+						ore 24:00
+						del
+						<d:DateBox ui:field='dataScadenzaPolizza' />
+						<div class="{style.separatoreDiv}" />
+						Data della Proposta che forma
+						parte integrante del presente
+						Contratto:
+						<d:DateBox ui:field='dataProposta' />
+						<div class="{style.divLateraleSX}">
+							<table class="{style.tableLateraleSX}">
+								<tr>
+									<td>
+										Condizioni Generali e Particolari come da seguenti stampati
+										allegati al presente Modulo:
+									</td>
+								</tr>
+							</table>
+							<table class="{style.tableLateraleSX}">
+								<tr>
+									<td>
+										Rischi e importi assicurati, Franchigie e Scoperti,
+										estensione
+										territoriale e Condizioni Speciali (che prevalgono
+										sulle
+										Condizioni Particolari e Generali di cui sopra)
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="{style.divLateraleDX}">
+							<table class="{style.tableLateraleDX}">
+								<tr>
+									<td>
+										<b>
+											<u>Quota Lloyd’s:</u>
+										</b>
+										<g:ListBox ui:field="quotaLloyds" stylePrimaryName="{style.listNoTable}" />
+										%
+										<br />
+										Numero e percentuale dei Sindacati dei
+										Lloyd’s che hanno
+										assunto
+										il
+										rischio per la quota Lloyd’s sopra
+										indicata:
+									</td>
+								</tr>
+								<tr>
+									<td class="{style.alignMiddle}">
+										<b>
+											<u>INSERIRE SIGLA IDENTIFICATIVA DEL SINDACATO E PERCENTUALE
+												DI
+												RITENZIONE DEL RISCHIO</u>
+										</b>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<table class="{style.premiTable}">
+							<tbody>
+								<tr>
+									<th class="{style.premiTableTh}">Premio Netto</th>
+									<th class="{style.premiTableTh}">Accessori</th>
+									<th class="{style.premiTableTh}">Imponibile</th>
+									<th class="{style.premiTableTh}">Imposte</th>
+									<th class="{style.premiTableTh}">Totale</th>
+								</tr>
+								<tr>
+									<td class="{style.premiTableTd}">
+										Complessivo
+										<f:EuroTextBox ui:field="premioNettoComplessivo"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="accessoriComplessivo"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="imponibileComplessivo"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="imposteComplessivo"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="premioLordoComplessivo"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+								</tr>
+								<tr>
+									<th class="{style.premiTableTh}">Commissioni su Netto</th>
+									<th class="{style.premiTableTh}">Commissioni su Accessori</th>
+									<th class="{style.premiTableTh}" colspan="2"></th>
+									<th class="{style.premiTableTh}">Commissioni Totali</th>
+								</tr>
+								<tr>
+									<td class="{style.premiTableTd}">
+										<f:PercentualeToEuroWidget ui:field="commissioniNetteComplessive" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:PercentualeToEuroWidget ui:field="commissioniAccessorieComplessive" />
+									</td>
+									<td colspan="2"></td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="commissioniTotaliComplessive"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						Il premio deve essere pagato al Corrispondente di seguito
+						specificato, il quale è autorizzato a riceverlo per conto degli
+						Assicuratori. Il mezzo di pagamento è concordato con detto
+						intermediario, nel rispetto della normativa vigente.
+						<table class="{style.premiTable}">
+							<tbody>
+								<tr>
+									<th class="{style.premiTableTh}">Premio Netto</th>
+									<th class="{style.premiTableTh}">Accessori</th>
+									<th class="{style.premiTableTh}">Imponibile</th>
+									<th class="{style.premiTableTh}">Imposte</th>
+									<th class="{style.premiTableTh}">Totale</th>
+								</tr>
+								<tr>
+									<td class="{style.premiTableTd}">
+										Prima rata
+										<f:EuroTextBox ui:field="premioNettoFrazionato"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="accessoriFrazionato"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="imponibileFrazionato"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="imposteFrazionato"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="premioLordoFrazionato"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+								</tr>
+								<tr>
+									<th class="{style.premiTableTh}">Commissioni su Netto</th>
+									<th class="{style.premiTableTh}">Commissioni su Accessori</th>
+									<th class="{style.premiTableTh}" colspan="2"></th>
+									<th class="{style.premiTableTh}">Commissioni Totali</th>
+								</tr>
+								<tr>
+									<td class="{style.premiTableTd}">
+										<f:PercentualeToEuroWidget ui:field="commissioniNetteFrazionate" />
+									</td>
+									<td class="{style.premiTableTd}">
+										<f:PercentualeToEuroWidget ui:field="commissioniAccessorieFrazionate" />
+									</td>
+									<td colspan="2"></td>
+									<td class="{style.premiTableTd}">
+										<f:EuroTextBox ui:field="commissioniTotaliFrazionate"
+											stylePrimaryName="{style.premiTableInput}" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						Modalità del pagamento del Premio ed eventuali regolazioni:
+						<g:ListBox ui:field="descrizioneFraz" stylePrimaryName="{style.descrizioneFraz}" />
+						<div class="{style.separatoreDiv}" />
+						Numero totale di pagine allegate:
+						<div class="{style.separatoreDiv}" />
+						<table class="{style.tableA3}">
+							<tbody>
+								<tr>
+									<th class="{style.width30}">Data</th>
+									<th class="{style.width40}">Il Corrispondente dei Lloyd's</th>
+									<th class="{style.width30}">L'Assicurato o il Contraente</th>
+								</tr>
+								<tr>
+									<td>
+										<d:DateBox ui:field="dataEmissione"
+											stylePrimaryName="{style.alignMiddle}" />
+									</td>
+									<td>INSERIRE ESATTA RAGIONE SOCIALE</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="{style.lastTable}">
+							<tbody>
+								<tr>
+									<td>
+										IL CONTRAENTE DICHIARA DI AVER RICEVUTO, PRIMA DELLA
+										SOTTOSCRIZIONE DEL CONTRATTO, IL FASCICOLO INFORMATIVO
+										CONTENENTE
+										LA NOTA INFORMATIVA COMPRENSIVA DEL GLOSSARIO E LE
+										CONDIZIONI DI
+										ASSICURAZIONE DI CUI AL REGOLAMENTO ISVAP n°35
+										DEL 26/05/2010.
+										<br />
+										Il
+										Contraente
+										:............................................................
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						Il pagamento del Premio per l’importo di
+						................................................. è stato fatto
+						in mie mani in data ........................................
+						<br />
+						<br />
+						L’Incaricato
+						......................................................
+					</div>
+					<br />
+					<br />
+				</g:HTMLPanel>
+			</g:ScrollPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

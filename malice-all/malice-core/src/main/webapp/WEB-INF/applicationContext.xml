@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<http use-expressions="true" auto-config="false" entry-point-ref="http403EntryPoint">
+		<intercept-url pattern="/servlet/comm" access="hasIpAddress('127.0.0.1')" />
+	</http>
+
+	<beans:bean id="http403EntryPoint"
+		class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint">
+	</beans:bean>
+
+</beans:beans>

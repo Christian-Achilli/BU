@@ -1,0 +1,132 @@
+
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.commonWidgets" xmlns:c="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		 .numeroTitolo {
+			width: 120px;
+		}
+		
+		.annullaConfermaWidgetEdit {
+			padding-top: 17px;
+		}
+		
+		.divValidationMsg {
+			background-image: url("img/bigvertLines.png");
+			background-position: right center;
+			background-repeat: no-repeat;
+			float: left;
+			height: 60px;
+			text-align: left;
+			padding-left: 3%;
+			padding-right: 3%;
+		}
+		
+		.elementoButton {
+			float: left;
+			height: 60px;
+			text-align: left;
+			width: 92px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		
+		.buttons {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			cursor: pointer;
+			display: block;
+			font-size: 0.72em;
+			height: 77px;
+			text-align: center;
+			width: 100px;
+			margin-bottom: 30px;
+			color: #000;
+			text-shadow: 0px 1px #fff;
+			font-weight: bold;
+			margin-top: -7px;
+			padding-bottom: 5px;
+		}
+		
+		.titolo {
+			margin-top: 7%;
+		}
+		
+		.tabella {
+			margin-left: 12.5%;
+			margin-right: 12.5%;
+			margin-top: 11px;
+			border-bottom: 2px;
+			border-bottom-color: white;
+			border-top: 3px;
+			border-spacing: 2;
+			width: 75%;
+			vertical-align: top;
+		}
+		
+		.tabella td {
+			width: 33%;
+			padding-bottom: 11px;
+		}
+		
+		.numeroTitolo {
+			width: 155px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div id="toolsDettaglioTitolo">
+					<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+					<div class="{resources.main.firstBoxToolbar} {style.numeroTitolo}">
+						<h1>Titolo</h1>
+						<g:Label ui:field='numeroTitolo' />
+					</div>
+					<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+					<t:IncassoForm ui:field="incassoForm" />
+					<t:ConfermaAnnullaNotaWidget ui:field="annullaTitoloWidget" />
+					<t:StornaTitoloWidget ui:field="stornaTitoloWidget" />
+					<t:RecuperoWidget ui:field="recuperoWidget" />
+					<t:RevocaAnnulloWidget ui:field="revocaAnnulloWidget" />
+					<div ui:field="buttonsTitleOperation">
+						<div class="{style.elementoButton}" ui:field='divIncasso'>
+							<g:Button stylePrimaryName="{resources.main.greyButton} {style.buttons}"
+								ui:field='buttonIncasso' title="Incasso  Titolo" text="Incasso" />
+						</div>
+						<div class="{style.elementoButton}" ui:field='divAnnulla'>
+							<g:Button stylePrimaryName="{resources.main.greyButton} {style.buttons}"
+								ui:field='buttonAnnulla' title="Annullo  Titolo" text="Annullo" />
+						</div>
+						<div class="{style.elementoButton}" ui:field='divStorno'>
+							<g:Button stylePrimaryName="{resources.main.greyButton} {style.buttons}"
+								ui:field='buttonStorno' title="Storno Incasso" text="Storno" />
+						</div>
+						<div class="{style.elementoButton}" ui:field='divRecupero'>
+							<g:Button stylePrimaryName="{resources.main.greyButton} {style.buttons}"
+								ui:field='buttonRecupero' title="Recupero Incasso Sospeso" text="Recupero" />
+						</div>
+						<div class="{style.elementoButton}" ui:field='divRevocaAnnullo'>
+							<g:Button stylePrimaryName="{resources.main.greyButton} {style.buttons}"
+								title="Revoca Annullo" text="Revoca" ui:field='buttonRevocaAnnullo' />
+						</div>
+					</div>
+				</div>
+				<div class="{resources.main.separatore}" ui:field="divSeparatoreUltimoDestra" />
+				<div class="{resources.main.smallButtonsContainer}" ui:field="rightButtonsContainer">
+					<g:Button
+						stylePrimaryName="{resources.main.firstSmallRightButton} {resources.main.backButton}"
+						ui:field='buttonIndietro' title="Indietro" />
+					<g:Button
+						stylePrimaryName="{resources.main.secondSmallRightButton} {resources.main.editButton}"
+						ui:field='buttonEdit' title="Edit" />
+					<t:AnnullaConfermaWidget ui:field="annullaConfermaWidgetEdit" />
+				</div>
+				<div class="{resources.main.separatore}" ui:field="divSeparatore" />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

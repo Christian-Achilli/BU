@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"Http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2011 12:09:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.kp.marsh.ebt.server.webapp.data.domain.BusinessInformation" table="BUSINESS_INFORMATION">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="products" class="com.kp.marsh.ebt.server.webapp.data.domain.Products" fetch="select" lazy="false">
+            <column name="prod_id" not-null="true">
+                <comment>id su PRODUCTS</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="referenceYears" class="com.kp.marsh.ebt.server.webapp.data.domain.ReferenceYears" fetch="select">
+            <column name="year_ref_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="informationOwners" class="com.kp.marsh.ebt.server.webapp.data.domain.InformationOwners" fetch="select">
+            <column name="owner_id" not-null="true" />
+        </many-to-one>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" not-null="true" />
+        </property>
+        <property name="optlock" type="java.lang.Integer">
+            <column name="optlock" />
+        </property>
+        <property name="valueType" type="string">
+            <column name="value_type" length="45" not-null="true" />
+        </property>
+        <property name="valueAmount" type="string">
+            <column name="value_amount" length="45" />
+        </property>
+        <property name="postIt" type="string">
+            <column name="postit" length="1024" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

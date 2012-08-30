@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:with field="resources"
+		type="com.kp.marsh.ebt.client.webapp.ui.resources.Resources"></ui:with>
+
+	<g:HTMLPanel>
+		<div class="{resources.popup.popBox}"> 
+		  <div class="{resources.popup.popContents}">
+		    <div class="{resources.popup.potInp}"> 
+		      <g:TextBox ui:field="inputValue"/>
+		    </div> 
+		  	<div class="{resources.popup.popBroker}"><g:Anchor ui:field="broker">Altro Broker</g:Anchor></div> 
+		    <div class="{resources.popup.popCompagnia}"><g:Anchor ui:field="compagnia">Compagnia</g:Anchor></div> 
+		    <div class="{resources.popup.popLabels}"><g:Anchor ui:field="notAppl"><span>N</span>on <span>A</span>pplicabile</g:Anchor></div>
+		    <div class="{resources.popup.popLabels}"><g:Anchor ui:field="inAltraCopertura"><span>I</span>n <span>A</span>ltra <span>C</span>opertura</g:Anchor></div> 
+		    <div class="{resources.popup.popLabels}"><g:Anchor ui:field="progrInt"><span>P</span>rog. <span>I</span>nternaz.</g:Anchor></div> 
+		    <div class="{resources.popup.popAggNota}"><g:Anchor ui:field="aggiungiNota">Nota</g:Anchor></div> 
+		  </div> 
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
