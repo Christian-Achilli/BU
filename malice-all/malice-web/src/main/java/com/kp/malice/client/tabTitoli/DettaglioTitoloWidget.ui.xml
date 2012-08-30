@@ -1,0 +1,212 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:f="urn:import:com.kp.malice.client.ui.widget">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.sectionTitolo {
+			margin-left: 7%;
+			font-size: 0.75em;
+			float: left;
+			width: 56%;
+		}
+		
+		.sectionDocumenti {
+			margin-top: 20px;
+			font-size: 0.75em;
+			float: left;
+			margin-left: 7%;
+			width: 23%;
+		}
+		
+		.section {
+			padding-bottom: 20px;
+			margin-left: 7%;
+			font-size: 0.75em;
+			width: 86%;
+			float: left;
+		}
+		
+		.h1 {
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #777;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 7px;
+		}
+		
+		.sectionTable {
+			width: 100%;
+		}
+		
+		.width100 {
+			width: "100%";
+			cursor: default;
+		}
+		
+		.sectionTable td {
+			vertical-align: middle;
+		}
+		
+		.sectionTr {
+			height: 24px;
+		}
+		
+		.sectionTr tr {
+			height: 24px;
+		}
+		
+		.labelColumn {
+			color: #777;
+			text-transform: uppercase;
+			width: 13%;
+			padding-left: 10px;
+		}
+		
+		.valueColumn {
+			width: 20%;
+			text-align: right;
+			padding-right: 10px;
+		}
+		
+		.bold {
+			font-weight: bold;
+		}
+		
+		.msgIncassiZero {
+			margin-bottom: 15px;
+		}
+		
+		.marginPremio {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		
+		.msgIncassiZero {
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+		
+		.verticalAlignMiddle {
+			vertical-align: middle;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:ScrollPanel>
+			<g:HTMLPanel>
+				<div class="{style.section}">
+					<h1 class="{style.h1}">DATI TITOLO</h1>
+					<!-- <f:DownloadDocumentiWidget ui:field="downloadDocumenti" /> -->
+					<table class="{style.sectionTable}">
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}">N. CERTIFICATO</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="numero" />
+							</td>
+							<td class="{style.labelColumn}">N. APPENDICE</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="appendice" />
+							</td>
+							<td class="{style.labelColumn}">STATO</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="stato" class="{style.bold}" />
+							</td>
+						</tr>
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}">DECORRENZA</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="decorrenza" class="{style.bold}" />
+							</td>
+							<td class="{style.labelColumn}">SCADENZA</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="scadenza" />
+							</td>
+							<td class="{style.labelColumn}">SUB-AGENTE</td>
+							<td class="{style.valueColumn}">
+								<f:EditableValidableTextLabelWidget
+									ui:field="subAgente" />
+							</td>
+						</tr>
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}">REFERENTE</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="broker" />
+							</td>
+							<td class="{style.labelColumn}">BIND. AUTH.</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="bindAuth" />
+							</td>
+							<td class="{style.labelColumn}">COD-CIG</td>
+							<td class="{style.valueColumn}">
+								<f:EditableValidableTextLabelWidget
+									ui:field="codCig" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- <div class="{style.sectionDocumenti}"> -->
+				<!-- <h1 class="{style.h1}">DOCUMENTI</h1> -->
+				<!-- <f:DownloadDocumentiWidget ui:field="downloadDocumenti" /> -->
+				<!-- </div> -->
+				<div class="{style.section}">
+					<h1 class="{style.h1}">CONTRAENTE</h1>
+					<table class="{style.sectionTable}">
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}" ui:field="identificativoRagSocLabel"></td>
+							<td class="{style.valueColumn}">
+								<span ui:field="identificativoRagSocValue" class="{style.bold}" />
+							</td>
+							<td class="{style.labelColumn}">C.F.</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="cf" />
+							</td>
+							<td class="{style.labelColumn}">P.IVA.</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="pIva" />
+							</td>
+						</tr>
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}">INDIRIZZO 1</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="indirizzo1" />
+							</td>
+							<td class="{style.labelColumn}">INDIRIZZO 2</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="indirizzo2" />
+							</td>
+							<td class="{style.labelColumn}">CAP</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="cap" />
+							</td>
+						</tr>
+						<tr class="{style.sectionTr}">
+							<td class="{style.labelColumn}">CITTA'</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="citta" />
+							</td>
+							<td class="{style.labelColumn}">PROVINCIA</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="region" />
+							</td>
+							<td class="{style.labelColumn}">NAZIONE</td>
+							<td class="{style.valueColumn}">
+								<span ui:field="country" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="{style.section}">
+					<h1 class="{style.h1}">PREMIO</h1>
+					<g:VerticalPanel ui:field="premioVP"
+						stylePrimaryName="{style.sectionTable} {style.sectionTr} {style.marginPremio}" />
+				</div>
+				<div class="{style.section}">
+					<h1 class="{style.h1}">INCASSI / STORNI</h1>
+					<f:ListaIncassiWidget ui:field="listaIncassiWidget"
+						stylePrimaryName="{style.width100} {style.verticalAlignMiddle}" />
+					<g:Label ui:field="msgIncassiZero" stylePrimaryName="{style.msgIncassiZero}" />
+				</div>
+			</g:HTMLPanel>
+		</g:ScrollPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

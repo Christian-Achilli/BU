@@ -1,13 +1,13 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets" xmlns:g="urn:import:com.google.gwt.user.client.ui"
-	xmlns:t="urn:import:com.kp.malice.client.tabTitoli">
+	xmlns:f="urn:import:com.kp.malice.client.ui.widget" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.toolbar" xmlns:l="urn:import:com.kp.malice.client.tabTitoli">
 	<ui:with field="resources"
         type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
 	<g:HTMLPanel>
-		<t:TitoliToolbarDettaglio ui:field="toolbarDettaglioTitolo" />
+		<t:ToolbarDettaglioTitolo ui:field="toolbarDettaglioTitolo" />
 		<div class="{resources.main.contentContainer}  {resources.main.padTopMiddleforContentContainer}">
-			<f:DettaglioTitoloWidget ui:field="dettaglioTitoloWidget" />
+			<l:DettaglioTitoloWidget ui:field="dettaglioTitoloWidget" />
 		</div>
 	</g:HTMLPanel>
 </ui:UiBinder>  

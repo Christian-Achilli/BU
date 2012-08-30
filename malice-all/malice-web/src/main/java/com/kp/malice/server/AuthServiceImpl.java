@@ -33,10 +33,8 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
                 else
                     nomeAge = authentication.getAgenzia().getDescription();
             }
-            String omcCodeAgenzia = ""; 
-            if(authentication.getAgenzia()!=null) //superAgente non ha una agenzia di riferimento
-            omcCodeAgenzia = authentication.getAgenzia().getOmcCode();
-            return new LoggedInUserInfo(nomeAge + " - OMC: " + omcCodeAgenzia,
+
+            return new LoggedInUserInfo(nomeAge + " - OMC: " + authentication.getAgenzia().getOmcCode(),
                     ((GrantedAuthority) authentication.getAuthorities().toArray()[0]).getAuthority());
         }
     }

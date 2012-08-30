@@ -8,10 +8,11 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.HasData;
-import com.kp.malice.client.ui.commonWidgets.DettaglioTitoloWidget;
+import com.kp.malice.client.tabTitoli.DettaglioTitoloWidget;
 import com.kp.malice.client.ui.gwtEvent.BackHandler;
 import com.kp.malice.client.ui.gwtEvent.DownloadEvent;
 import com.kp.malice.client.ui.gwtEvent.DownloadHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarChiusureDettaglioTitolo;
 import com.kp.malice.shared.proxies.DettaglioIncassoTitoloProxy;
 import com.kp.malice.shared.proxies.EstrattoContoLioProxy;
 import com.kp.malice.shared.proxies.IncassoTitoloProxy;
@@ -25,7 +26,7 @@ public class ChiusureDettaglioTitolo extends Composite {
     }
 
     @UiField
-    ChiusureToolbarDettaglioTitolo toolbarChiusureDettaglioTitolo;
+    ToolbarChiusureDettaglioTitolo toolbarChiusureDettaglioTitolo;
 
     @UiField
     DettaglioTitoloWidget dettaglio;

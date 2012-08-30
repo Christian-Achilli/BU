@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.kp.malice.client.tabSintesi.CalculateDataToPlotService;
+import com.kp.malice.client.tabStatistiche.CalculateDataToPlotService;
 
 public class CalculateDataToPlotServiceImpl extends RemoteServiceServlet implements CalculateDataToPlotService {
 

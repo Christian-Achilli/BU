@@ -5,50 +5,47 @@ import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
 import com.google.gwt.place.shared.PlaceController;
 import com.kp.malice.client.AuthServiceAsync;
-import com.kp.malice.client.amministrazione.AmministrazioneActivityMapper;
-import com.kp.malice.client.amministrazione.MainAmministratoreLayout;
 import com.kp.malice.client.header.HeaderActivityMapper;
 import com.kp.malice.client.mvp.MalicePlaceHistoryMapper;
-import com.kp.malice.client.tabAgenzie.AgenzieActivityMapper;
 import com.kp.malice.client.tabBenvenuto.BenvenutoActivityMapper;
 import com.kp.malice.client.tabChiusure.ChiusureActivityMapper;
-import com.kp.malice.client.tabGiornata.GiornataActivityMapper;
-import com.kp.malice.client.tabSintesi.SintesiActivityMapper;
+import com.kp.malice.client.tabIncassi.IncassiActivityMapper;
+import com.kp.malice.client.tabStatistiche.StatisticheActivityMapper;
 import com.kp.malice.client.tabTitoli.TitoliActivityMapper;
-import com.kp.malice.client.ui.commonWidgets.IAppLoadingViewDisplay;
-import com.kp.malice.client.ui.commonWidgets.MainAgenteLayout;
+import com.kp.malice.client.ui.widget.IAppLoadingViewDisplay;
+import com.kp.malice.client.ui.widget.MainAgenteLayout;
 
 @GinModules(MaliceGinClientModule.class)
 public interface MaliceWebGinjector extends Ginjector {
 
-    public IAppLoadingViewDisplay getAppLoadingDisplay();
+	// public AmministrazioneActivityMapper getAmministrazioneMapper();
 
-    public AuthServiceAsync getAuthService();
+	public IAppLoadingViewDisplay getAppLoadingDisplay();
 
-    public BenvenutoActivityMapper getBenvenutoActivityMapper();
+	public AuthServiceAsync getAuthService();
 
-    public ChiusureActivityMapper getChiusureActivityMapper();
+	public BenvenutoActivityMapper getBenvenutoActivityMapper();
 
-    public AmministrazioneActivityMapper getAmministrazioneActivityMapper();
+	public ChiusureActivityMapper getChiusureActivityMapper();
 
-    public EventBus getEventBus();
+	// public TitoliActivityMapper getDettaglioTitoloActivityMapper();
 
-    public AgenzieActivityMapper getAgenzieActivityMapper();
+	public EventBus getEventBus();
 
-    public HeaderActivityMapper getHeaderActivityMapper();
+	public HeaderActivityMapper getHeaderActivityMapper();
 
-    public TitoliActivityMapper getTitoliActivityMapper();
+	public TitoliActivityMapper getTitoliActivityMapper();
 
-    public GiornataActivityMapper getGiornataActivityMapper();
+	public IncassiActivityMapper getIncassiActivityMapper();
 
-    public MainAgenteLayout getLayoutApplicazioneAgente();
+	public MainAgenteLayout getLayoutApplicazioneAgente();
 
-    public MainAmministratoreLayout getMainAmministratoreLayout();
+	// public MainAmministratoreLayout getLayoutApplicazioneAmministrazione();
 
-    public MalicePlaceHistoryMapper getMalicePlaceHistoryMapper();
+	public MalicePlaceHistoryMapper getMalicePlaceHistoryMapper();
 
-    public PlaceController getPlaceController();
+	public PlaceController getPlaceController();
 
-    public SintesiActivityMapper getStatisticheActivityMapper();
+	public StatisticheActivityMapper getStatisticheActivityMapper();
 
 }

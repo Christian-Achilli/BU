@@ -15,14 +15,13 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.kp.malice.client.MaliceDebugIds;
 import com.kp.malice.client.header.IHeaderViewDisplay;
-import com.kp.malice.client.tabAgenzie.AgenzieToolbar;
-import com.kp.malice.client.tabBenvenuto.BenvenutoToolbar;
-import com.kp.malice.client.tabChiusure.ChiusureToolbarChiusure;
-import com.kp.malice.client.tabSintesi.SintesiToolbar;
-import com.kp.malice.client.tabTitoli.TitoliToolbarDettaglio;
-import com.kp.malice.client.tabTitoli.TitoliToolbarRicerca;
-import com.kp.malice.client.ui.commonWidgets.MainAgenteLayout;
 import com.kp.malice.client.ui.resources.MaliceResources;
+import com.kp.malice.client.ui.toolbar.ToolbarChiusureChiusure;
+import com.kp.malice.client.ui.toolbar.ToolbarDettaglioTitolo;
+import com.kp.malice.client.ui.toolbar.ToolbarRicercaStatistiche;
+import com.kp.malice.client.ui.toolbar.ToolbarRicercaTitoli;
+import com.kp.malice.client.ui.toolbar.ToolbarRiepilogoMensileTitoli;
+import com.kp.malice.client.ui.widget.MainAgenteLayout;
 
 public class HeaderView extends Composite implements IHeaderViewDisplay {
 
@@ -34,32 +33,23 @@ public class HeaderView extends Composite implements IHeaderViewDisplay {
     IHeaderViewDisplay.Listener listener;
 
     //    @UiField(provided = true)
-    AgenzieToolbar toolbarSelectAgenzia; // TAB TITOLI
-    
-    //    @UiField(provided = true)
-    TitoliToolbarRicerca toolbarRicerca; // TAB TITOLI
+    ToolbarRicercaTitoli toolbarRicerca; // TAB TITOLI
 
     //    @UiField(provided = true)
-    SintesiToolbar toolbarRicercaStatistiche; // TAB STATISTICHE
+    ToolbarRicercaStatistiche toolbarRicercaStatistiche; // TAB STATISTICHE
 
     //    @UiField
-    BenvenutoToolbar toolbarSintesiMensileTitoli; // TAB BENVENUTO
+    ToolbarRiepilogoMensileTitoli toolbarSintesiMensileTitoli; // TAB BENVENUTO
 
     //    @UiField(provided = true)
-    TitoliToolbarDettaglio toolbarDettaglioTitolo; // TAB TITOLI
+    ToolbarDettaglioTitolo toolbarDettaglioTitolo; // TAB TITOLI
 
     //    @UiField(provided = true)
-    ChiusureToolbarChiusure toolbarBottoneChiudiMese; // TAB CHIUSURA
+    ToolbarChiusureChiusure toolbarBottoneChiudiMese; // TAB CHIUSURA
 
     @UiField
     Anchor username;
 
-    @UiField
-    Anchor aSelectAgenzia;
-    
-    @UiField
-    LIElement liSelectAgenzia;
-    
     @UiField
     Anchor aBenvenuto;
 
@@ -103,13 +93,11 @@ public class HeaderView extends Composite implements IHeaderViewDisplay {
         this.tabManager = tabManager;
         initWidget(uiBinder.createAndBindUi(this));
         tabList = new ArrayList<LIElement>();
-        tabList.add(liSelectAgenzia);
         tabList.add(liBenvenuto);
         tabList.add(liChiusure);
         tabList.add(liStatistiche);
         tabList.add(liTitoli);
         tabList.add(liIncassi);
-        situazioneToolbarVisibleWidgetsChiusureTab.put(toolbarSelectAgenzia, false);
         situazioneToolbarVisibleWidgetsChiusureTab.put(toolbarDettaglioTitolo, false);
         situazioneToolbarVisibleWidgetsChiusureTab.put(toolbarBottoneChiudiMese, false);
         situazioneToolbarVisibleWidgetsChiusureTab.put(toolbarRicerca, false);
@@ -117,7 +105,6 @@ public class HeaderView extends Composite implements IHeaderViewDisplay {
         aBenvenuto.ensureDebugId(MaliceDebugIds.BENVENUTO_DBG_ID);
         aTitoli.ensureDebugId(MaliceDebugIds.TITOLI_DBG_ID);
         aChiusure.ensureDebugId(MaliceDebugIds.CHIUSURE_DBG_ID);
-        onTabSelectAgenziaSelected(null);
     }
 
     private void applyStyleToTab(LIElement tab) {
@@ -130,12 +117,6 @@ public class HeaderView extends Composite implements IHeaderViewDisplay {
         }
     }
 
-    @UiHandler("aSelectAgenzia")
-    void onTabSelectAgenziaSelected(ClickEvent e) {
-    	applyStyleToTab(liSelectAgenzia);
-    	tabManager.selectSelectAgenzia();
-    }
-    
     @UiHandler("aBenvenuto")
     void onTabBenvenutoSelected(ClickEvent e) {
         applyStyleToTab(liBenvenuto);

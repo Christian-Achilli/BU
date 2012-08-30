@@ -12,7 +12,6 @@ import org.hibernate.criterion.Restrictions;
 import org.joda.time.DateTime;
 
 import com.kp.malice.MalicePropertyContainer;
-import com.kp.malice.entities.business.Agency;
 import com.kp.malice.entities.business.AgenziaRMA;
 import com.kp.malice.entities.business.BindingAuthority;
 import com.kp.malice.entities.business.FilieraLloyds;
@@ -45,19 +44,19 @@ public class FilieraLloydsFactory extends EntityAliasFactory {
         EntityAlias alias = findEntityAliasFromAliasCode(en, an, lioCodeString);
         return findLioReferenceCodeFromUoa(alias.getUntaOperAun());
     }
-
-    public List<LioReferenceCode> getListLioReferenceCode() {
-        AliasName an = findAliasNameForLloydsBroker();
+    
+    public List<LioReferenceCode> getListLioReferenceCode(){
+    	AliasName an = findAliasNameForLloydsBroker();
         EncodingName en = findEncodingNameForLio();
         List<EntityAlias> aliasList = findEntityAliasList(en, an);
-        log.trace("aliasList size: " + aliasList.size());
+        log.trace("aliasList size: "+aliasList.size());
         List<LioReferenceCode> lioReferenceCodeList = new ArrayList<LioReferenceCode>();
         lioReferenceCodeList.add(new LioReferenceCode("*", "TUTTI"));
         for (EntityAlias entityAlias : aliasList) {
-            lioReferenceCodeList.add(findLioReferenceCodeFromUoa(entityAlias.getUntaOperAun()));
-        }
-        log.trace("lioReferenceCodeList size: " + lioReferenceCodeList.size());
-        return lioReferenceCodeList;
+        	lioReferenceCodeList.add(findLioReferenceCodeFromUoa(entityAlias.getUntaOperAun()));
+		}
+        log.trace("lioReferenceCodeList size: "+lioReferenceCodeList.size());
+    	return lioReferenceCodeList;
     }
 
     public LloydsItalianOffice getLio() {
@@ -222,7 +221,7 @@ public class FilieraLloydsFactory extends EntityAliasFactory {
         EntityAlias aliasBroker = findAliasBrokerLioFromUoa(uoaCoverHoder);
         return new LioReferenceCode(aliasBroker.getAliasCode(), uoaCoverHoder.getShortDescription());
     }
-
+    
     private LloydsCoverHolder findLloydsCoverHolderFromLloydsPin(String covHoldId) {
         LloydsCoverHolder ch = null;
         if (StringUtils.isNotEmpty(covHoldId)) {
@@ -263,10 +262,6 @@ public class FilieraLloydsFactory extends EntityAliasFactory {
         filiera.setBindingAuthority(getBindingAuthority(pol.getVrnPols().iterator().next()));
         filiera.setCoverHolder(findLloydsCoverHolderFromLloydsPin(pol.getCodiceCoverHolder()));
         return filiera;
-    }
-
-    public List<Agency> findAllAgenzie() {
-        return new ArrayList<Agency>();
     }
 
 }

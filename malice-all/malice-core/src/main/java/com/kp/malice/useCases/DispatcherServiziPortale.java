@@ -13,7 +13,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.google.inject.Inject;
 import com.kp.malice.boundaries.services.PortaleServiceBoundary;
-import com.kp.malice.entities.business.Agency;
 import com.kp.malice.entities.business.AgenziaRMA;
 import com.kp.malice.entities.business.ChiusuraMensileLio;
 import com.kp.malice.entities.business.EstrattoContoLio;
@@ -364,11 +363,5 @@ public class DispatcherServiziPortale implements PortaleServiceBoundary {
     public List<LioReferenceCode> getLioReferenceCodeProxyList() throws Exception {
         log.debug("DiapstcehrServiziPortale.getLioReferenceCodeProxyList");
         return filieraLloydsFactory.getListLioReferenceCode();
-    }
-
-    @Override
-    public List<Agency> findAllAgenzie() throws Exception {
-        log.debug("DiapstcehrServiziPortale.findAllAgenzie");
-        return filieraLloydsFactory.findAllAgenzie();
     }
 }

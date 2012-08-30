@@ -18,7 +18,7 @@ public class RuoloApplicativo extends RecordIdentifier {
     private TipoRuolo tipoRuolo;
 
     public enum TipoRuolo {
-        ROLE_AGENTE, ROLE_LIO, ROLE_MONITOR, ROLE_SUPERAGENTE;
+        ROLE_AGENTE, ROLE_LIO, ROLE_MONITOR;
 
         public static TipoRuolo fromString(String role) {
             for (TipoRuolo ruolo : values()) {

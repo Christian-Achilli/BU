@@ -8,7 +8,6 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.HasData;
-import com.kp.malice.client.ui.commonWidgets.DettaglioTitoloWidget;
 import com.kp.malice.client.ui.gwtEvent.AnnullaHandler;
 import com.kp.malice.client.ui.gwtEvent.BackHandler;
 import com.kp.malice.client.ui.gwtEvent.ConfermaNotaEvent.ConfermaNotaHandler;
@@ -19,6 +18,7 @@ import com.kp.malice.client.ui.gwtEvent.RevocaAnnulloHandler;
 import com.kp.malice.client.ui.gwtEvent.SaveDettaglioTitoloEvent;
 import com.kp.malice.client.ui.gwtEvent.SaveDettaglioTitoloHandler;
 import com.kp.malice.client.ui.gwtEvent.StornoHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarDettaglioTitolo;
 import com.kp.malice.shared.proxies.DettaglioIncassoTitoloProxy;
 import com.kp.malice.shared.proxies.IncassoTitoloProxy;
 import com.kp.malice.shared.proxies.NewTitoloProxy;
@@ -31,7 +31,7 @@ public class TitoliDettaglio extends Composite {
     }
 
     @UiField
-    TitoliToolbarDettaglio toolbarDettaglioTitolo;
+    ToolbarDettaglioTitolo toolbarDettaglioTitolo;
     @UiField
     DettaglioTitoloWidget dettaglioTitoloWidget;
 

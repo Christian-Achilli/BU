@@ -10,6 +10,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.kp.malice.client.ui.gwtEvent.BackHandler;
 import com.kp.malice.client.ui.gwtEvent.DownloadHandler;
 import com.kp.malice.client.ui.gwtEvent.SelezioneEstrattoContoEvent.SelezioneEstrattoContoHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarChiusureEstrattiConto;
 import com.kp.malice.shared.proxies.ChiusuraLioProxy;
 import com.kp.malice.shared.proxies.EstrattoContoLioProxy;
 
@@ -21,7 +22,7 @@ public class ChiusureEstrattiConto extends Composite {
     }
 
     @UiField
-    ChiusureToolbarEstrattiConto toolbarChiusureEstrattiConto;
+    ToolbarChiusureEstrattiConto toolbarChiusureEstrattiConto;
 
     @UiField
     ChiusureListaEstrattiConto chiusureListaEstrattiConto;

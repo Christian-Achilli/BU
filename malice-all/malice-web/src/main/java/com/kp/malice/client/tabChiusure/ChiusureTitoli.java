@@ -7,10 +7,11 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.kp.malice.client.ui.commonWidgets.ListaTitoliWidget;
 import com.kp.malice.client.ui.gwtEvent.BackHandler;
 import com.kp.malice.client.ui.gwtEvent.DownloadHandler;
 import com.kp.malice.client.ui.gwtEvent.SelezioneTitoloHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarChiusureTitoli;
+import com.kp.malice.client.ui.widget.ListaTitoliWidget;
 import com.kp.malice.shared.proxies.EstrattoContoLioProxy;
 import com.kp.malice.shared.proxies.NewTitoloProxy;
 
@@ -26,7 +27,7 @@ public class ChiusureTitoli extends Composite {
     }
 
     @UiField
-    ChiusureToolbarTitoli toolbarChiusureTitoli;
+    ToolbarChiusureTitoli toolbarChiusureTitoli;
 
     @UiField
     ListaTitoliWidget listaTitoliWidget;

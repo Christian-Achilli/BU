@@ -57,9 +57,6 @@ public abstract class UserPlace extends Place {
         } else if (arg0.getRole().equals("ROLE_ADMIN")) {
             result = new AmministratorePlace(arg0.getDisplayName());
         }
-        else if (arg0.getRole().equals("ROLE_SUPER_AGENTE")) {
-            result = new SuperAgenteRmaPlace(arg0.getDisplayName());
-        }
         return result;
     }
 

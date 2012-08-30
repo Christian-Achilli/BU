@@ -20,9 +20,9 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.CalendarUtil;
 import com.google.gwt.user.datepicker.client.DateBox;
-import com.kp.malice.client.ui.commonWidgets.ErrorAlertMessage;
-import com.kp.malice.client.ui.commonWidgets.Loader;
-import com.kp.malice.client.ui.commonWidgets.SuccessAlertMessage;
+import com.kp.malice.client.ui.widget.ErrorAlertMessage;
+import com.kp.malice.client.ui.widget.Loader;
+import com.kp.malice.client.ui.widget.SuccessAlertMessage;
 import com.kp.malice.shared.proxies.NewTitoloProxy;
 
 /**

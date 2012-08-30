@@ -35,7 +35,6 @@ public class UserDbRepository implements UserRepository {
         case ROLE_AGENTE:
             aggiungiAgenzia(account, maliceUserAuthenticated);
             break;
-        case ROLE_SUPERAGENTE:
         case ROLE_LIO:
         case ROLE_MONITOR:
             break;

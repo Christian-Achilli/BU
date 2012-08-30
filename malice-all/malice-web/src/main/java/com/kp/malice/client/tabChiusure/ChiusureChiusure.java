@@ -10,6 +10,7 @@ import com.google.gwt.view.client.HasData;
 import com.kp.malice.client.ui.gwtEvent.ConfermaNotaEvent.ConfermaNotaHandler;
 import com.kp.malice.client.ui.gwtEvent.DownloadHandler;
 import com.kp.malice.client.ui.gwtEvent.SelezioneChiusuraEvent.SelezioneChiusuraHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarChiusureChiusure;
 import com.kp.malice.shared.proxies.ChiusuraLioProxy;
 
 public class ChiusureChiusure extends Composite {
@@ -20,7 +21,7 @@ public class ChiusureChiusure extends Composite {
     }
     
     @UiField
-    ChiusureToolbarChiusure toolbarChiusureChiusure; 
+    ToolbarChiusureChiusure toolbarChiusureChiusure; 
  
     @UiField
     ChiusureListaChiusure chiusureListaChiusure;

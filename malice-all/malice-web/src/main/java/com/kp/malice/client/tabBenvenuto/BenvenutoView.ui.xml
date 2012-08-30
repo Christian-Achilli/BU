@@ -1,7 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:f="urn:import:com.kp.malice.client.ui.commonWidgets" xmlns:g="urn:import:com.google.gwt.user.client.ui"
-	xmlns:b="urn:import:com.kp.malice.client.tabBenvenuto">
+	xmlns:f="urn:import:com.kp.malice.client.ui.widget" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:t="urn:import:com.kp.malice.client.ui.toolbar">
 	<ui:with field="resources"
 		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
 	<ui:style>
@@ -113,9 +113,9 @@
 		}
 	</ui:style>
 	<g:HTMLPanel>
-		<b:BenvenutoToolbar ui:field="toolbarRiepilogoMensileTitoli" />
-		<div
-			class="{resources.main.contentContainer} {resources.main.padTopMiddleforContentContainer}">
+		<t:ToolbarRiepilogoMensileTitoli
+			ui:field="toolbarRiepilogoMensileTitoli" />
+		<div class="{resources.main.contentContainer} {resources.main.padTopMiddleforContentContainer}">
 			<div class="{style.box}">
 				<h3>Contatti Lloyd’s</h3>
 				<f:DownloadDocumentiWidget ui:field="downloadDocumentiLloyds" />
@@ -129,10 +129,8 @@
 					<li class="{style.liBlack}">
 						portale-gar@kubepartners.it
 						<a href="mailto:portale-gar@kubepartners.it" class="{style.mailLink}">
-							<g:Image ui:field="imgMail" resource="{resources.mailIcon}"
-								stylePrimaryName="{style.mailIcon}" />
-							<g:Image ui:field="imgMailBlack" resource="{resources.mailIconBlack}"
-								stylePrimaryName="{style.mailIcon}" />
+							<g:Image ui:field="imgMail" resource="{resources.mailIcon}" stylePrimaryName="{style.mailIcon}" />
+							<g:Image ui:field="imgMailBlack" resource="{resources.mailIconBlack}" stylePrimaryName="{style.mailIcon}" />
 						</a>
 					</li>
 					<li class="{style.liBlack}">

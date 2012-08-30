@@ -14,8 +14,6 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
-import com.kp.malice.client.ui.commonWidgets.EuroTextBox;
-import com.kp.malice.client.ui.commonWidgets.PercentualeToEuroWidget;
 import com.kp.malice.client.ui.gwtEvent.AnnullaEvent;
 import com.kp.malice.client.ui.gwtEvent.AnnullaHandler;
 import com.kp.malice.client.ui.gwtEvent.ConfermaEvent;
@@ -26,6 +24,9 @@ import com.kp.malice.client.ui.gwtEvent.InserisciTitoloHandler;
 import com.kp.malice.client.ui.gwtEvent.MaliceChangeEvent;
 import com.kp.malice.client.ui.gwtEvent.VisualizzaListaTitoliEvent;
 import com.kp.malice.client.ui.gwtEvent.VisualizzaListaTitoliHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarInserimentoTitolo;
+import com.kp.malice.client.ui.widget.EuroTextBox;
+import com.kp.malice.client.ui.widget.PercentualeToEuroWidget;
 import com.kp.malice.shared.Gender;
 import com.kp.malice.shared.MaliceUtil;
 import com.kp.malice.shared.proxies.CertificatoLloydsProxy;
@@ -35,15 +36,15 @@ import com.kp.malice.shared.proxies.NewTitoloProxy;
 
 public class TitoliInserimento extends Composite {
 
-    private static TitoliInserimentoUiBinder uiBinder = GWT.create(TitoliInserimentoUiBinder.class);
+    private static ListaTitoliWidgetUiBinder uiBinder = GWT.create(ListaTitoliWidgetUiBinder.class);
 
-    interface TitoliInserimentoUiBinder extends UiBinder<Widget, TitoliInserimento> {
+    interface ListaTitoliWidgetUiBinder extends UiBinder<Widget, TitoliInserimento> {
     }
 
     NewTitoloProxy titoloProxy;
 
     @UiField
-    TitoliToolbarInserimento toolbarInserimentoTitolo;
+    ToolbarInserimentoTitolo toolbarInserimentoTitolo;
 
     @UiField
     ListBox codiceRamo;

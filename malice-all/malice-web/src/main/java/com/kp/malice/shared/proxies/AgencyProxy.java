@@ -4,7 +4,7 @@ import java.util.Date;
 
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
-import com.kp.malice.entities.business.Agency;
+import com.kp.malice.server.model.Agency;
 
 @ProxyFor(value = Agency.class)
 public interface AgencyProxy extends ValueProxy{

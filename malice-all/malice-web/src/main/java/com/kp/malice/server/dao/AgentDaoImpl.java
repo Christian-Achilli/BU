@@ -7,8 +7,10 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
 
-import com.kp.malice.entities.business.Agency;
+import com.google.inject.Inject;
+import com.kp.malice.server.model.Agency;
 import com.kp.malice.server.model.Agent;
+import com.kp.malice.shared.proxies.AgencyProxy;
 
 public class AgentDaoImpl implements AgentDao {
 

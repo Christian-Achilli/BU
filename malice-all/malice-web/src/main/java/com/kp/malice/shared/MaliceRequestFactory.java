@@ -10,7 +10,6 @@ import com.google.web.bindery.requestfactory.shared.RequestFactory;
 import com.google.web.bindery.requestfactory.shared.Service;
 import com.kp.malice.boundaries.services.PortaleServiceBoundary;
 import com.kp.malice.server.inject.InjectingServiceLocator;
-import com.kp.malice.shared.proxies.AgencyProxy;
 import com.kp.malice.shared.proxies.ChiusuraLioProxy;
 import com.kp.malice.shared.proxies.DettaglioIncassoTitoloProxy;
 import com.kp.malice.shared.proxies.EstrattoContoLioProxy;
@@ -58,8 +57,6 @@ public interface MaliceRequestFactory extends RequestFactory {
 		Request<GrafiDataProxy> calculateDataGrafi(Date start, Date end, String broker);
 
 		Request<List<LioReferenceCodeProxy>> getLioReferenceCodeProxyList();
-
-		Request<List<AgencyProxy>> findAllAgenzie();
 
     }
 

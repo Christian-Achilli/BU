@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import com.kp.malice.entities.business.Agency;
 import com.kp.malice.entities.business.ChiusuraMensileLio;
 import com.kp.malice.entities.business.EstrattoContoLio;
 import com.kp.malice.entities.business.GrafiData;
@@ -50,6 +49,4 @@ public interface PortaleServiceBoundary {
     GrafiData calculateDataGrafi(Date start, Date end, String broker) throws Exception;
     
     List<LioReferenceCode> getLioReferenceCodeProxyList() throws Exception;
-    
-    List<Agency> findAllAgenzie() throws Exception;
 }

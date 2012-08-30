@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
+import com.kp.malice.server.model.Agency;
 import com.kp.malice.server.model.Agent;
 
 @ProxyFor(value = Agent.class)

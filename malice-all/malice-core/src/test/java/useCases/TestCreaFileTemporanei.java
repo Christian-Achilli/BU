@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mindrot.jbcrypt.BCrypt;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;

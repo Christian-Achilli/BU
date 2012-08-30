@@ -2,7 +2,10 @@ package com.kp.malice.server.dao;
 
 import java.util.List;
 
-import com.kp.malice.entities.business.Agency;
+import com.google.web.bindery.requestfactory.shared.Request;
+import com.kp.malice.server.model.Agency;
+import com.kp.malice.server.model.Agent;
+import com.kp.malice.shared.proxies.AgencyProxy;
 
 public interface AgencyDao {
 

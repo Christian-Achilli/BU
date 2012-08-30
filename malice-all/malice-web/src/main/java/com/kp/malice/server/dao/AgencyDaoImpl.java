@@ -5,7 +5,11 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.kp.malice.entities.business.Agency;
+import com.google.gwt.user.client.Random;
+import com.google.inject.Inject;
+import com.kp.malice.server.model.Agency;
+import com.kp.malice.server.model.Agent;
+import com.kp.malice.shared.proxies.AgencyProxy;
 
 public class AgencyDaoImpl implements AgencyDao {
 

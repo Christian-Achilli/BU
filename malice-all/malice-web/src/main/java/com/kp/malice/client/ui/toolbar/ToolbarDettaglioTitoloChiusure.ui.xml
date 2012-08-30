@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.bottoneIndietro,.bottoneIndietro:HOVER {
+			background-image: url("img/annulla.png");
+			background-position: center center;
+			background-repeat: no-repeat;
+			margin-right: 35px;
+			cursor: pointer;
+			display: block;
+			float: right;
+			font-size: 1.3em;
+			height: 77px;
+			text-align: center;
+			width: 100px;
+			margin-bottom: 30px;
+			color: #1A4386;
+			text-shadow: 0px 1px #222;
+			font-weight: bold;
+			margin-top: -7px;
+			padding-bottom: 9px;
+		}
+		
+		.elementoButton {
+			background-image: url("img/bigvertLines.png");
+			background-position: right center;
+			background-repeat: no-repeat;
+			float: right;
+			height: 60px;
+		}
+		
+		.div {
+			float: right;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div id="toolsDettaglioTitolo">
+					<div class="{resources.main.firstBoxToolbar}">
+						<h1>Titolo</h1>
+						<g:Label ui:field='numeroTitolo' />
+					</div>
+				</div>
+				<div class="{style.div}">
+					<div id="bottone" class="{style.elementoButton}">
+						<g:Button stylePrimaryName="{style.bottoneIndietro}"
+							ui:field='button' title="Indietro" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

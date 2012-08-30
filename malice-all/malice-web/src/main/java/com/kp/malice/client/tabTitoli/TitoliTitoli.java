@@ -9,7 +9,6 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.ColumnSortEvent.ListHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.kp.malice.client.ui.commonWidgets.ListaTitoliWidget;
 import com.kp.malice.client.ui.gwtEvent.AggiornaStatoTitoloERimessaHandler;
 import com.kp.malice.client.ui.gwtEvent.BackHandler;
 import com.kp.malice.client.ui.gwtEvent.CalendarioValueChangeEvent.CalendarioValueChangeHandler;
@@ -21,6 +20,8 @@ import com.kp.malice.client.ui.gwtEvent.FiltraTitoliHandler;
 import com.kp.malice.client.ui.gwtEvent.RimuoviFiltroHandler;
 import com.kp.malice.client.ui.gwtEvent.SelezioneTitoloHandler;
 import com.kp.malice.client.ui.gwtEvent.VisualizeInsertTitleFormHandler;
+import com.kp.malice.client.ui.toolbar.ToolbarRicercaTitoli;
+import com.kp.malice.client.ui.widget.ListaTitoliWidget;
 import com.kp.malice.shared.proxies.NewTitoloProxy;
 
 public class TitoliTitoli extends Composite {
@@ -31,7 +32,7 @@ public class TitoliTitoli extends Composite {
     }
 
     @UiField
-    TitoliToolbarRicerca toolbarRicercaTitoli;
+    ToolbarRicercaTitoli toolbarRicercaTitoli;
 
     @UiField
     ListaTitoliWidget listaTitoliWidget;

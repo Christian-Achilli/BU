@@ -57,10 +57,7 @@
 				</div>
 				<div class="{resources.main.topTab}">
 					<ul class="{resources.main.topBar}">
-						<li ui:field="liSelectAgenzia">
-							<g:Anchor ui:field="aSelectAgenzia" stylePrimaryName="{style.paddingTop14}">Seleziona Agenzia</g:Anchor>
-						</li>
-						<li ui:field="liBenvenuto">
+						<li class="{resources.main.selected}" ui:field="liBenvenuto">
 							<g:Anchor ui:field="aBenvenuto" stylePrimaryName="{style.paddingTop14}">Benvenuto</g:Anchor>
 						</li>
 						<li ui:field="liTitoli">

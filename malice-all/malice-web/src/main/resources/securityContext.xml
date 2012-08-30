@@ -13,7 +13,7 @@
 		<intercept-url pattern="/malice/xml/receiver" access="IS_AUTHENTICATED_ANONYMOUSLY" />
 		<!-- JAVA MELODY MONITORING -->
 		<intercept-url pattern="/monitoring" access="ROLE_MONITOR" />
-		<intercept-url pattern="/**" access="ROLE_AGENTE, ROLE_SUPERAGENTE" />
+		<intercept-url pattern="/**" access="ROLE_AGENTE, ROLE_ADMIN" />
 		<form-login login-page="/login.html" login-processing-url="/j_spring_security_check" default-target-url="/MaliceWeb.html" always-use-default-target="false" authentication-failure-url="/loginFailure.html" />
 		<logout logout-url="/j_spring_security_logout" invalidate-session="true" success-handler-ref="myLogoutSuccessHandler" />
 		<session-management session-fixation-protection="newSession" />

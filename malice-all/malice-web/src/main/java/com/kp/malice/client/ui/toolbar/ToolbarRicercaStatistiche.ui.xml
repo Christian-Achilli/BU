@@ -1,0 +1,81 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.kp.malice.client.ui.widget">
+	<ui:with field="resources"
+		type="com.kp.malice.client.ui.resources.MaliceResources"></ui:with>
+	<ui:style>
+		.grafoTitleStyle {
+			float: left;
+			margin-left: 0px;
+			text-transform: uppercase;
+			color: #777;
+			margin-top: 22px;
+			font-weight: bold;
+			font-size: 0.9em;
+			margin-bottom: 10px;
+			width: 290px;
+		}
+		
+		.elementiTrovati {
+			background-image: url("img/bigvertLines.png");
+			background-position: right center;
+			background-repeat: no-repeat;
+			float: left;
+			height: 60px;
+			padding-left: 5%;
+			padding-right: 16%;
+			text-align: left;
+			width: 133px;
+		}
+		
+		.combo {
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 21px;
+		}
+		
+		.comboDiv {
+			float: left;
+			padding-left: 64px;
+		}
+		
+		.comboDiv h1 {
+			float: left;
+			color: #777777;
+			font-size: 0.68em;
+			padding-top: 24px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div class="{resources.main.toolbarContainer}">
+			<div class="{resources.main.toolsContainer}">
+				<div class="{resources.main.separatore} {resources.main.floatLeft}" />
+				<div id="toolsListaTitoli">
+					<div class="{style.elementiTrovati}">
+						<g:Label ui:field="grafoTitle" styleName="{style.grafoTitleStyle}" />
+					</div>
+					<div class="{style.comboDiv}">
+						<h1>Mesi</h1>
+						<g:ListBox ui:field="monthBox" styleName="{style.combo} {resources.main.noBorder}" />
+					</div>
+					<div class="{style.comboDiv}">
+						<h1>Referente</h1>
+						<g:ListBox ui:field="brokerBox" styleName="{style.combo} {resources.main.noBorder}" />
+					</div>
+					<div class="{resources.main.separatore}" />
+					<div class="{resources.main.smallButtonsContainer}">
+						<g:Button
+							stylePrimaryName="{resources.main.secondSmallRightButton} {resources.main.montanteButton}"
+							ui:field="montanteButton" title="Premi"/>
+						<g:Button
+							stylePrimaryName="{resources.main.secondSmallRightButton} {resources.main.premiButton}"
+							ui:field="premiButton" title="Montante"/>
+					</div>
+					<div class="{resources.main.separatore}" />
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

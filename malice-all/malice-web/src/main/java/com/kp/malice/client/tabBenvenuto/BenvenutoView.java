@@ -9,10 +9,13 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
+
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Widget;
-import com.kp.malice.client.ui.commonWidgets.DownloadDocumentiWidget;
+import com.kp.malice.client.MaliceDebugIds;
 import com.kp.malice.client.ui.resources.MaliceResources;
+import com.kp.malice.client.ui.toolbar.ToolbarRiepilogoMensileTitoli;
+import com.kp.malice.client.ui.widget.DownloadDocumentiWidget;
 import com.kp.malice.shared.proxies.LinkProxy;
 
 public class BenvenutoView extends Composite implements IBenvenutoViewDisplay {
@@ -29,7 +32,7 @@ public class BenvenutoView extends Composite implements IBenvenutoViewDisplay {
     @UiField(provided = true)
     DownloadDocumentiWidget videoPortaleGar;
     @UiField
-    BenvenutoToolbar toolbarRiepilogoMensileTitoli;
+    ToolbarRiepilogoMensileTitoli toolbarRiepilogoMensileTitoli;
     @UiField
     Image imgMail;
     @UiField

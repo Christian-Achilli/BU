@@ -4,8 +4,6 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import com.kp.malice.entities.business.Agency;
-
 
 public class Agent {
 
